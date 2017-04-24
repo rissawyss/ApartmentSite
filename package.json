@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/rissawyss/ApartmentSite/issues"
   },
-  "homepage": "https://github.com/rissawyss/ApartmentSite#readme"
+  "homepage": "https://github.com/rissawyss/ApartmentSite#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "path": "^0.12.7"
+  }
 }
