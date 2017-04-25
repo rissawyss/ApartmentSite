@@ -17,9 +17,19 @@ app.set('views', path.join(__dirname, 'views'));
 // set the 'view engine' value to 'pug'
 app.set('view engine', 'pug');
 
-
 // app.use does middleware
 app.use(bodyParser.json());
+
+
+// needs some app.get
+
+
+
+
+
+
+
+
 
 // this line allows the express object to be imported by /bin/www
 module.exports = app;
