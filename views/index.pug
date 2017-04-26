@@ -1,5 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	h1= title
+	p Welcome to #{title}
+	p= message
+	a(href="http://google.com") this is the link text
+	div
+		ul
+			li first element
+			li second element
+			li third element
+
+	input(name="ourname", type="text", id="ourid")
+
+
