@@ -1,16 +1,56 @@
-extends layout
+doctype html
+html(lang="en")
+  head
+    title ApartmentSite
+    meta(charset="UTF-8")
+    meta(name="viewport" content="initial-scale=1.0, user-scalable=no")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(rel="stylesheet" type="text/css" href="")
+    link(rel="icon" href="assets/images/squillo_favicon.png" type="image/png" sizes="16x16")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  body
+    header
+      nav.navbar-fixed
+        nav
+          div.nav-wrapper
+            a(href="#!").brand-logo Logo
+              ul.right.hide-on-med-and-down
+                li
+                  a(href="") Amenities
+                li
+                  a(href="") Floor Plans
+                li
+                  a(href="") Location
+                li
+                  a(href="") Residents
+                li
+                  a(href="") Contact
+                li
+                  a(href="") Apply Now
+    main
+      section
+        p This is the Main Section
+    footer.page-footer
+      div.container
+        div.row
+          div.col.l6.l12
+          h5.white-text Footer Content
+          p.grety-text.text-lighten-4 You can use rows and columns here to organize your footer content
+        div.col.l4.offset-l2.s12
+          h5.white-text Links
+          ul
+            li
+              a.grey-text.text-lighten-3(href="#!") Link1
+              a.grey-text.text-lighten-3(href="#!") Link2
+              a.grey-text.text-lighten-3(href="#!") Link3
+              a.grey-text.text-lighten-3(href="#!") Link4
+      div.footer-copyright
+        div.container © 2017 Isometric Interactive
+        a.grey-text.text-lighten-4.right(href="#!") Management Login        
 
-block content
-	h1= title
-	p Welcome to #{title}
-	p= message
-	a(href="http://google.com") this is the link text
-	div
-		ul
-			li first element
-			li second element
-			li third element
-
-	input(name="ourname", type="text", id="ourid")
+    script(type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js")
+    script(type="text/javascript" src="")
 
 
