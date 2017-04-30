@@ -1,0 +1,30 @@
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+.apply {
+	border: 1.5px solid white;
+	font-weight: bold;
+	font-size: .8em;
+}
+
+.amenities, .floor-plans, .location {
+	height: 300px;
+	margin-bottom: 0px;
+	padding: 20px;
+}
+
+.lock {
+	position: relative;
+	top:2px;
+}
+
+#sidenav-overlay {
+	z-index: 0;
+}
