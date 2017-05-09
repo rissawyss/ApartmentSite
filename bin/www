@@ -15,13 +15,15 @@ var app = require('../app');
 var debug = require('debug')('library-express:server');
 var http = require('http');
 
+// var db = require("../models");
+
 /**
  * Get port from environment and store in Express.
  */
 
 
 // configure the port
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '8080');
 // set the port
 app.set('port', port);
 
