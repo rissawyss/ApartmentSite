@@ -5,6 +5,7 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+
 const app = express(); // create express app object
 
 // app.use does middleware
@@ -26,20 +27,22 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars'); // set the 'view engine'
 
 
-// var db = require("./models");
 
 // set 'views' value to specify the folder where templates will be stored
 app.set('views', path.join(__dirname, 'views'));
 
 
 
-// app.use(cookieParser());
 
 
 app.use('/', index);
 app.use('/tenants', tenants);
 app.use('/manager', manager);
 // app.use('/users', users);
+
+
+
+
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
