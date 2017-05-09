@@ -5,7 +5,7 @@ Dynamic property management app
 
 ''' npm run devstart '''
 
-- visit http://localhost:3000/
+- visit http://localhost:8080/
 
 - rs to restart server manually, but it should be restarting on file change locally
 
