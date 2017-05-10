@@ -8,7 +8,10 @@ router.get('/manager/tenant', function(req, res, next) {
 
 router.get('/manager/applicants', function(req, res, next){
 	res.render('manager');
+});
 
+router.get('/manager/prospects', function(req, res, next){
+	res.render('manager');
 });
 
 router.post('/manager/tenant', function(req, res, next){
@@ -18,6 +21,11 @@ router.post('/manager/tenant', function(req, res, next){
 router.post('/manager/applicants', function(req, res, next){
 	res.render('manager');
 });
+
+router.post('/manager/prospects', function(req, res, next){
+	res.render('manager');
+});
+
 
 
 

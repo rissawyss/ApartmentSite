@@ -8,8 +8,8 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 
-router.post('/applicants', function(req, res, next){
-	db.Applicant.create(req.body).then(function(applicantData){
+router.post('/prospect', function(req, res, next){
+	db.Prospect.create(req.body).then(function(prospectData){
 		res.json(applicantData);
 	});
 });
