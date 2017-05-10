@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/prospect', function(req, res, next){
 	db.Prospect.create(req.body).then(function(prospectData){
-		res.json(applicantData);
+		res.json(prospectData); // how should we respond to the prospect?
 	});
 });
 
