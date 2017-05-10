@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-// var db = requrire('../models');
+var db = requrire('../models');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -8,8 +8,10 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 
-router.post('/', function(req, res, next){
-	res.json();
+router.post('/applicants', function(req, res, next){
+	db.Applicant.create(req.body).then(function(applicantData){
+		res.json(applicantData);
+	});
 });
 
 module.exports = router;

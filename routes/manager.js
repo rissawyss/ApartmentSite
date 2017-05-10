@@ -1,14 +1,24 @@
 var express = require('express');
 var router = express.Router();
-// var db = requrire('../models');
+var db = requrire('../models');
 
-/* GET home page. */
-router.get('/tenants', function(req, res, next) {
-  res.render('index', { title: 'manager page' , message: 'And to the Jungle'});
+router.get('/manager/tenant', function(req, res, next) {
+  res.render('manager');
 });
 
-router.post('/', function(req, res, next){
-	res.json();
+router.get('/manager/applicants', function(req, res, next){
+	res.render('manager');
+
 });
+
+router.post('/manager/tenant', function(req, res, next){
+	res.render('manager');
+});
+
+router.post('/manager/applicants', function(req, res, next){
+	res.render('manager');
+});
+
+
 
 module.exports = router;
