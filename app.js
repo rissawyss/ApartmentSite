@@ -6,30 +6,43 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 
-var index = require('./routes/index');
-
-
-// create the app object
-// this object has key value pairs some of which we will be setting
-var app = express();
-
-// view engine setup
-// set 'views' value to specify the folder where templates will be stored
-app.set('views', path.join(__dirname, 'views'));
-// set the 'view engine' value to 'pug'
-app.set('view engine', 'pug');
+const app = express(); // create express app object
 
 // app.use does middleware
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-// app.use(cookieParser());
+
+
+var index = require('./routes/index');
+var tenants = require('./routes/tenants');
+var manager = require('./routes/manager');
+
+//use handlebars engine as template engine, use 'main' as our base file
+var exphbs = require('express-handlebars');
+app.engine('handlebars', exphbs({
+	defaultLayout: 'main'
+}));
+app.set('view engine', 'handlebars'); // set the 'view engine'
+
+
+
+// set 'views' value to specify the folder where templates will be stored
+app.set('views', path.join(__dirname, 'views'));
+
+
+
 
 
 app.use('/', index);
+app.use('/tenants', tenants);
+app.use('/manager', manager);
 // app.use('/users', users);
-// needs some app.get
+
+
+
+
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

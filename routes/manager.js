@@ -3,9 +3,8 @@ var router = express.Router();
 // var db = requrire('../models');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-	// renderObj = { title: 'Landing Appartment Express' , message: 'And to the Jungle'};
-  res.render('index');
+router.get('/tenants', function(req, res, next) {
+  res.render('index', { title: 'manager page' , message: 'And to the Jungle'});
 });
 
 router.post('/', function(req, res, next){
