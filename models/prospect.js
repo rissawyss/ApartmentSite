@@ -19,6 +19,7 @@ module.exports = function(sequelize, DataTypes) {
     // how_did_you_hear: DataTypes.STRING,
     // property_unit: DataTypes.STRING,
     // pets: DataTypes.STRING,
+    bedrooms: DataTypes.STRING,
     move_in_date: DataTypes.DATEONLY,
     message: DataTypes.TEXT
   });
