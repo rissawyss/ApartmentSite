@@ -1,14 +1,16 @@
 var express = require('express');
 var router = express.Router();
-// var db = requrire('../models');
+var db = requrire('../models');
 
-/* GET home page. */
-router.get('/tenants', function(req, res, next) {
-  res.render('index', { title: 'tenants page' , message: 'And to the Jungle'});
+
+router.get('/tenant/workorders', function(req, res, next) {
+	// view with unit workorders
+  res.render('tenants');
 });
 
-router.post('/', function(req, res, next){
-	res.json();
+router.post('/tenant/workorders', function(req, res, next){
+	// update view to reflect workorder created
+	res.render('tenants');
 });
 
 module.exports = router;
