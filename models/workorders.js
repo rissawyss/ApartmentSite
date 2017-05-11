@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
     submitted: DataTypes.DATE,
     status: DataTypes.STRING,
     last_activity: DataTypes.DATE,
-    service_cost: DataTypes.(DECIMAL(10,2)),
+    service_cost: DataTypes.DECIMAL(10,2),
     paid: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
@@ -21,7 +21,8 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       defaultValue: false
     },
-    date_completed: DataTypes.DATEONLY,
+    date_completed: DataTypes.DATEONLY
+  },
     {
       // We're saying that we want our Tenant to have Work Orders
       classMethods: {
@@ -45,8 +46,7 @@ module.exports = function(sequelize, DataTypes) {
           });
         }
       }
-    }
-  });
+    });
   return WorkOrder;
-};
+  };
 
