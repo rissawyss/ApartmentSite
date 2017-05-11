@@ -5,6 +5,7 @@ var db = require('../models');
 
 router.get('/tenant/workorders', function(req, res, next) {
 	// view with unit workorders
+	
   res.render('tenants');
 });
 
