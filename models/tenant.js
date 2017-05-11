@@ -11,11 +11,11 @@ module.exports = function(sequelize, DataTypes) {
     apartment_number: DataTypes.STRING,
     city: DataTypes.STRING,
     state: DataTypes.STRING,
-    zip_code: DataTypes.(INTEGER(11).ZEROFILL),
+    zip_code: DataTypes.INTEGER(11).ZEROFILL,
     no_of_occupants: DataTypes.INTEGER,
-    rent: DataTypes.(DECIMAL(10,2)),
+    rent: DataTypes.DECIMAL(10,2),
     rent_last_paid: DataTypes.DATEONLY,
-    total_rent_paid: DataTypes.(DECIMAL(10,2)),
+    total_rent_paid: DataTypes.DECIMAL(10,2),
     lease_start: DataTypes.DATEONLY,
     lease_end: DataTypes.DATEONLY,
     // tenants default to false parking status
@@ -25,7 +25,8 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: false
     },
     parking_permit_no: DataTypes.INTEGER,
-    parking_permit_status: DataTypes.STRING,
+    parking_permit_status: DataTypes.STRING
+  },
     // Here we'll pass a second "classMethods" object into the define method
     // This is for any additional configuration we want to give our models
     {
@@ -34,6 +35,6 @@ module.exports = function(sequelize, DataTypes) {
         associate: function(models) {Tenant.hasMany(models.WorkOrders)}
       }
     }
-  });
+  );
   return Tenant;
 };
