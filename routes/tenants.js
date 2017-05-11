@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var db = requrire('../models');
+var db = require('../models');
 
 
 router.get('/tenant/workorders', function(req, res, next) {
