@@ -14,6 +14,9 @@ router.get('/manager/prospects', function(req, res, next){
 	res.render('manager');
 });
 
+router.get('/manager/contractors', function(req, res, next){
+});
+
 router.post('/manager/tenant', function(req, res, next){
 	res.render('manager');
 });
