@@ -63,7 +63,7 @@
             <h4 class="align center">CONTACT US</h4>
             <div class="row">
               <!-- Contact Form -->
-              <form class="col s12 l6 offset-l3">
+              <form class="col s12 l6 offset-l3" id="contactForm">
                 <div class="row">
                   <div class="input-field col s6">
                     <input id="first_name" type="text" class="validate">
@@ -74,22 +74,23 @@
                     <label for="last_name">Last Name</label>
                   </div>
                   <div class="row">
-                    <div class="input-field col s6">
+                    <div class="input-field col s12 m6">
                       <i class="material-icons prefix">email</i>
                       <input id="email" type="email" class="validate">
                       <label for="email">Email</label>
                     </div>
-                  </div>
-                  <div class="input-field col s6">
+                  
+                  <div class="input-field col s12 m6">
                     <i class="material-icons prefix">phone</i>
-                    <input id="icon_telephone" type="tel" class="validate">
-                    <label for="icon_telephone">Telephone</label>
+                    <input id="telephone" type="tel" class="validate">
+                    <label for="telephone">Telephone</label>
+                  </div>
                   </div>
                   <div class="input-field col s12">
-                    <select multiple>
+                    <select id='bedrooms' multiple>
                       <!-- <option value="" disabled selected>BEDROOMS</option> -->                     
-                      <option value="2">1 Bedroom</option>
-                      <option value="3">2 Bedroom</option>
+                      <option value="1">1 Bedroom</option>
+                      <option value="2">2 Bedroom</option>
                       <option value="3">3 Bedroom</option>
                     </select>
                     <label>Bedrooms</label>
@@ -98,14 +99,20 @@
                 <div class="row">
                   <div class="col s12">
                     <label>Move In Date</label>
-                    <input id="Move-in" type="date" class="datepicker">
+                    <input id="move-in" type="date" class="datepicker">
                   </div>
                 </div>
                 <div class="row">
-
                   <div class="input-field col s12">
                     <textarea id="textarea1" class="materialize-textarea"></textarea>
                     <label for="textarea1">Message</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12 l12">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                      <i class="material-icons right">send</i>
+                    </button>
                   </div>                    
                 </div>                
                 <!-- Contact Form End -->
@@ -140,7 +147,7 @@
 
             </div>
           </div>
-      </footer>     
+      </footer>  
       
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -148,17 +155,86 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
       <script>
-      $( document ).ready(function() {
-        
+      $(document).ready(function() {
+
+        // Initialize the Select Element
         $('select').material_select();
+        // Date Picker
         $('.datepicker').pickadate({
-          selectMonths: true, // Creates a dropdown to control month
-          selectYears: 2 // Creates a dropdown of 2 years to control year
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 2 // Creates a dropdown of 2 years to control year
         });
+        // Side Navigation collapse 
         $(".button-collapse").sideNav();
-        console.log( "ready!" );
-      });
+        console.log("ready!");
+
+        // Prospect Form Variables
+        var firstName = $("#first_name").val().trim(); 
+        var lastName = $("#last_name").val().trim();
+        var email = $("#email").val().trim();
+        var telephone = $("#telephone").val();
+        var bedrooms = $("#bedrooms").val(); 
+        var moveInDate = $("#move-in").val();
+        var textarea1 = $("#textarea1").val();
+
+        $("#contactForm").on("submit", "#contactForm", handleContactSubmit);
+        // Event listener for Submit Button on Contact Form 
+        // $("#contactForm").submit(function(){
+        //     event.preventDefault(); 
+            
+        //     // TESTING
+        //     // console.log("submitted");
+        //     // console.log(firstName);
+        //     // console.log(lastName);
+        //     // console.log(email);
+        //     // console.log(telephone);
+        //     // console.log(bedrooms);
+        //     // console.log(moveInDate);
+        //     // console.log(textarea1);
+        // });
         
+        // Event listener for Submit Button on Contact Form
+
+        var Prospect = {
+          firstname: firstName,
+          lastname: lastName,
+          email: email,
+          phone: phone,
+          rooms: rooms,
+          moveIn: moveIn,
+          textarea1: textarea1
+        }
+        
+
+
+        // function handleContactSubmit(event) {
+        //     event.preventDefault();
+
+        //     if (!firstName.val() || !lastName.val() || !email.val() || !moveIn.val()) {
+        //         alert('missing information');
+        //         return;
+        //     }
+
+        //     postProspect({
+        //         firstname: firstName,
+        //         lastname: lastName,
+        //         email: email,
+        //         phone: phone,
+        //         rooms: rooms,
+        //         moveIn: moveIn,
+        //         textarea1: textarea1
+        //     });
+        // }
+
+
+
+        // function postProspect(userData){
+        //   $.post("/prospects", userData)
+        //   .then(console.log('thank you for submiting'));
+        // }
+
+
+});
       </script>
     </body>
   </html>
