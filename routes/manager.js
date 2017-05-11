@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var db = requrire('../models');
+var db = require('../models');
 
 router.get('/manager/tenant', function(req, res, next) {
   res.render('manager');
