@@ -169,38 +169,31 @@
         console.log("ready!");
 
         // Prospect Form Variables
-        var firstName; //= $("#first_name").val().trim();
-        var lastName;
-        var email;
-        var telephone;
-        var bedrooms; // testing this jquery to get checked value 
-        var moveInDate;
-        var textarea1;
+        var firstName = $("#first_name").val().trim(); 
+        var lastName = $("#last_name").val().trim();
+        var email = $("#email").val().trim();
+        var telephone = $("#telephone").val();
+        var bedrooms = $("#bedrooms").val(); 
+        var moveInDate = $("#move-in").val();
+        var textarea1 = $("#textarea1").val();
 
-
+        $("#contactForm").on("submit", "#contactForm", handleContactSubmit);
         // Event listener for Submit Button on Contact Form 
-        $("#contactForm").submit(function(){
-            event.preventDefault();
-
-            firstName = $("#first_name").val().trim();
-            lastName = $("#last_name").val().trim(); 
-            email = $("#email").val().trim();
-            telephone = $("#telephone").val();
-            bedrooms = $("#bedrooms").val();
-            moveInDate = $("#move-in").val();
-            textarea1 = $("#textarea1").val();
+        // $("#contactForm").submit(function(){
+        //     event.preventDefault(); 
             
-            // TESTING
-            // console.log("submitted");
-            // console.log(firstName);
-            // console.log(lastName);
-            // console.log(email);
-            // console.log(telephone);
-            // console.log(bedrooms);
-            // console.log(moveInDate);
-            // console.log(textarea1);
-        });
+        //     // TESTING
+        //     // console.log("submitted");
+        //     // console.log(firstName);
+        //     // console.log(lastName);
+        //     // console.log(email);
+        //     // console.log(telephone);
+        //     // console.log(bedrooms);
+        //     // console.log(moveInDate);
+        //     // console.log(textarea1);
+        // });
         
+        // Event listener for Submit Button on Contact Form
 
         var Prospect = {
           firstname: firstName,
@@ -211,7 +204,7 @@
           moveIn: moveIn,
           textarea1: textarea1
         }
-        // $("#contactForm").on("click", "#contactForm", handleContactSubmit);
+        
 
 
         // function handleContactSubmit(event) {
