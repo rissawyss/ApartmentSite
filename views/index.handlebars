@@ -49,31 +49,31 @@
             <h4 class="align center">CONTACT US</h4>
             <div class="row">
               <!-- Contact Form -->
-              <form class="col s12 l6 offset-l3" id="contactForm">
+              <form action='/prospect' method='post' class="col s12 l6 offset-l3" id="contactForm">
                 <div class="row">
                   <div class="input-field col s6">
-                    <input id="first_name" type="text" class="validate">
+                    <input id="first_name" name='first_name' type="text" class="validate">
                     <label for="first_name">First Name</label>
                   </div>
                   <div class="input-field col s6">
-                    <input id="last_name" type="text" class="validate">
+                    <input id="last_name" name='last_name' type="text" class="validate">
                     <label for="last_name">Last Name</label>
                   </div>
                   <div class="row">
                     <div class="input-field col s12 m6">
                       <i class="material-icons prefix">email</i>
-                      <input id="email" type="email" class="validate">
+                      <input id="email" name='email' type="email" class="validate">
                       <label for="email">Email</label>
                     </div>
                   
                   <div class="input-field col s12 m6">
                     <i class="material-icons prefix">phone</i>
-                    <input id="telephone" type="tel" class="validate">
+                    <input id="telephone" name='telephone' type="tel" class="validate">
                     <label for="telephone">Telephone</label>
                   </div>
                   </div>
                   <div class="input-field col s12">
-                    <select id='bedrooms' multiple>
+                    <select id='bedrooms' name='bedrooms' multiple>
                       <!-- <option value="" disabled selected>BEDROOMS</option> -->                     
                       <option value="1">1 Bedroom</option>
                       <option value="2">2 Bedroom</option>
@@ -85,12 +85,12 @@
                 <div class="row">
                   <div class="col s12">
                     <label>Move In Date</label>
-                    <input id="move-in" type="date" class="datepicker">
+                    <input id="move-in" name='moveInDate' type="date" class="datepicker">
                   </div>
                 </div>
                 <div class="row">
                   <div class="input-field col s12">
-                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                    <textarea id="textarea1" class="materialize-textarea" name='textarea1'></textarea>
                     <label for="textarea1">Message</label>
                   </div>
                 </div>

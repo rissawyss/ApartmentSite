@@ -3,6 +3,7 @@ var router = express.Router();
 var db = require('../models');
 
 router.get('/manager/tenant', function(req, res, next) {
+	// db.Tenant.findAll){
   res.render('manager');
 });
 

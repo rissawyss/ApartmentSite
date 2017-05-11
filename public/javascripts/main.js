@@ -16,40 +16,40 @@ $(document).ready(function() {
     var lastName = $("#last_name").val().trim();
     var email = $("#email").val().trim();
     var phone = $('#telephone').val();
-    var rooms = $('#bedrooms' :checked).val(); // testing this jquery to get checked value 
+    // var rooms = $('#bedrooms' :checked).val(); // testing this jquery to get checked value 
     var moveIn = $('#move-in').val();
     var textarea1 = $('#textarea1').val().trim();
 
 
-    // Event listener for Submit Button on Contact Form 
-    $("form").submit(function(){
-        console.log("submitted");
-        handleContactSubmit();
-    });
+    // // Event listener for Submit Button on Contact Form 
+    // $("form").submit(function(){
+    //     console.log("submitted");
+    //     handleContactSubmit();
+    // });
     
 
 
     // $("#contactForm").on("click", "#contactForm", handleContactSubmit);
 
 
-    function handleContactSubmit(event) {
-        event.preventDefault();
+    // function handleContactSubmit(event) {
+    //     event.preventDefault();
 
-        if (!firstName.val() || !lastName.val() || !email.val() || !moveIn.val()) {
-            alert('missing information');
-            return;
-        }
+    //     if (!firstName.val() || !lastName.val() || !email.val() || !moveIn.val()) {
+    //         alert('missing information');
+    //         return;
+    //     }
 
-        postProspect({
-            firstname: firstName,
-            lastname: lastName,
-            email: email,
-            phone: phone,
-            rooms: rooms,
-            moveIn: moveIn,
-            textarea1: textarea1
-        });
-    }
+    //     postProspect({
+    //         firstname: firstName,
+    //         lastname: lastName,
+    //         email: email,
+    //         phone: phone,
+    //         rooms: rooms,
+    //         moveIn: moveIn,
+    //         textarea1: textarea1
+    //     });
+    // }
 
 
 
