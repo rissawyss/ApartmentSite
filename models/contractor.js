@@ -20,7 +20,9 @@ module.exports = function(sequelize, DataTypes) {
     {
       // We're saying that we want our Contractor to have Work Orders
       classMethods: {
-        associate: function(models) {Contractor.hasMany(models.WorkOrders)}
+        associate: function(models) {
+          Contractor.hasMany(models.WorkOrder)
+        }
       }
     }
   );
