@@ -14,10 +14,17 @@ main {
 	font-size: .8em;
 }
 
-.amenities, .floor-plans, .location {
+.amenities, .floor-plans {
 	height: 300px;
 	margin-bottom: 0px;
 	padding: 20px;
+}
+
+.location {
+	margin-bottom:0px;
+	padding:20px;
+	padding-left:0px;
+	padding-bottom:0px;
 }
 
 .lock {
@@ -31,5 +38,5 @@ main {
 
 #map {
     height: 400px;
-    width: 50%;
+    width: 60%;    
 }
