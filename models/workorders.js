@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var WorkOrder = sequelize.define("WorkOrder", {
-    issue: {
+    request: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -11,6 +11,11 @@ module.exports = function(sequelize, DataTypes) {
     status: DataTypes.STRING,
     last_activity: DataTypes.DATE,
     service_cost: DataTypes.DECIMAL(10,2),
+    permission_to_enter: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: "no"
+    },
     paid: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
