@@ -6,9 +6,10 @@
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!-- Compiled and minified CSS -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="../public/stylesheets/style.css">
       <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     
+  </head>
     </head>
 
     <body>
@@ -55,6 +56,7 @@
           <a id="location"></a>
           <div class="location black white-text">
             <h4 class="align center">LOCATION</h4>
+            <div id="map"></div>             
           </div>
         </section>
         <section>
@@ -153,8 +155,10 @@
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+      <script src="../public/javascripts/main.js"></script>
 
-      <script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBRGeoK9_ttzqkK5ge-pOhjP-xxm3zbrY&callback=initMap"></script>
+      <!-- <script>
       $(document).ready(function() {
 
         // Initialize the Select Element
@@ -172,40 +176,56 @@
         var firstName = $("#first_name").val().trim(); 
         var lastName = $("#last_name").val().trim();
         var email = $("#email").val().trim();
-        var telephone = $("#telephone").val();
-        var bedrooms = $("#bedrooms").val(); 
-        var moveInDate = $("#move-in").val();
-        var textarea1 = $("#textarea1").val();
+        var telephone = $("#telephone").val().trim();
+        var bedrooms = $("#bedrooms").val().trim(); 
+        var moveInDate = $("#move-in").val().trim();
+        var textarea1 = $("#textarea1").val().trim();
 
-        $("#contactForm").on("submit", "#contactForm", handleContactSubmit);
-        // Event listener for Submit Button on Contact Form 
-        // $("#contactForm").submit(function(){
-        //     event.preventDefault(); 
-            
-        //     // TESTING
-        //     // console.log("submitted");
-        //     // console.log(firstName);
-        //     // console.log(lastName);
-        //     // console.log(email);
-        //     // console.log(telephone);
-        //     // console.log(bedrooms);
-        //     // console.log(moveInDate);
-        //     // console.log(textarea1);
-        // });
-        
+
         // Event listener for Submit Button on Contact Form
+        $(document).on("submit", "#contactForm", handleContactSubmit);
 
-        var Prospect = {
-          firstname: firstName,
-          lastname: lastName,
+        // getProspects();
+            
+        
+        function handleContactSubmit(event){
+          event.preventDefault();
+          
+          upsertProspect({
+          firstName: firstName,
+          lastName: lastName,
           email: email,
-          phone: phone,
-          rooms: rooms,
-          moveIn: moveIn,
+          telephone: telephone,
+          bedrooms: bedrooms,
+          moveInDate: moveInDate,
           textarea1: textarea1
-        }
+          
+        }); 
+
+          
+
         
 
+
+
+        // // A function for creating a prospect. Calls getProspects upon completion
+        // function upsertProspect(prospectData) {
+        //   // $.post("/api/prospects", prospectData)
+        //   //   .then(getProspects);
+        //   console.log(prospectData.firstName);
+        // }
+
+
+        // function getProspects() {
+        //   $.get("/api/prospects", function(data) {
+        //     var rowsToAdd = [];
+        //     for (var i = 0; i < data.length; i++) {
+        //       rowsToAdd.push(createProspectRow(data[i]));
+        //     }
+        //     renderProspectList(rowsToAdd);
+        //     nameInput.val("");
+        //   });
+        // }
 
         // function handleContactSubmit(event) {
         //     event.preventDefault();
@@ -226,15 +246,29 @@
         //     });
         // }
 
+        // Event listener for Submit Button on Contact Form        
+//         $("#contactForm").submit(function(){
+//             event.preventDefault(); 
+            
+//             // TESTING
+//             console.log("submitted");
+//             console.log(firstName);
+//             // console.log(lastName);
+//             // console.log(email);
+//             // console.log(telephone);
+//             // console.log(bedrooms);
+//             // console.log(moveInDate);
+//             // console.log(textarea1);
+//         });
 
 
-        // function postProspect(userData){
-        //   $.post("/prospects", userData)
-        //   .then(console.log('thank you for submiting'));
-        // }
+//         // function postProspect(userData){
+//         //   $.post("/prospects", userData)
+//         //   .then(console.log('thank you for submiting'));
+//         // }
 
 
-});
-      </script>
+// });
+      </script> -->
     </body>
   </html>
