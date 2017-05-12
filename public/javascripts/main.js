@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    
     // Initialize the Select Element
     $('select').material_select();
     // Date Picker
@@ -9,16 +9,20 @@ $(document).ready(function() {
     });
     // Side Navigation collapse 
     $(".button-collapse").sideNav();
-    console.log("ready!");
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+    
+    
 
-    // Prospect Form
-    var firstName = $("#first_name").val().trim();
-    var lastName = $("#last_name").val().trim();
-    var email = $("#email").val().trim();
-    var phone = $('#telephone').val();
-    // var rooms = $('#bedrooms' :checked).val(); // testing this jquery to get checked value 
-    var moveIn = $('#move-in').val();
-    var textarea1 = $('#textarea1').val().trim();
+
+    // var firstName = $("#first_name").val().trim();
+    // var lastName = $("#last_name").val().trim();
+    // var email = $("#email").val().trim();
+    // var phone = $('#telephone').val();
+    // var rooms = $('#bedrooms').val(); // testing this jquery to get checked value 
+    // var moveIn = $('#move-in').val();
+    // var textarea1 = $('#textarea1').val().trim();
+
 
 
     // // Event listener for Submit Button on Contact Form 
@@ -29,8 +33,8 @@ $(document).ready(function() {
     
 
 
-    // $("#contactForm").on("click", "#contactForm", handleContactSubmit);
 
+    // // $("#contactForm").on("click", "#contactForm", handleContactSubmit);
 
     // function handleContactSubmit(event) {
     //     event.preventDefault();
@@ -52,11 +56,28 @@ $(document).ready(function() {
     // }
 
 
+    //     if (!firstName.val() || !lastName.val() || !email.val() || !moveIn.val()) {
+    //         alert('missing information');
+    //         return;
+    //     }
 
-    function postProspect(userData){
-    	$.post("/prospects", userData)
-    	.then(console.log('thank you for submiting'));
-    }
+    //     postProspect({
+    //         firstname: firstName,
+    //         lastname: lastName,
+    //         email: email,
+    //         phone: phone,
+    //         rooms: rooms,
+    //         moveIn: moveIn,
+    //         textarea1: textarea1
+    //     });
+    // }
 
 
+
+    // function postProspect(userData){
+    // 	$.post("/prospects", userData)
+    // 	.then(console.log('thank you for submiting'));
+    // }
+
+    console.log("ready!");
 });
