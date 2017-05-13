@@ -44,3 +44,8 @@ main {
     height: 400px;
     width: 45%;    
 }
+
+img {
+	width: 100%;
+	height: auto;
+}
