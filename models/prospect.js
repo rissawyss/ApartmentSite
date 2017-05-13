@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
     // property_unit: DataTypes.STRING,
     // pets: DataTypes.STRING,
     bedrooms: DataTypes.STRING,
-    move_in_date: DataTypes.DATEONLY,
+    move_in_date: DataTypes.STRING,
     message: DataTypes.TEXT
   });
   return Prospect;
