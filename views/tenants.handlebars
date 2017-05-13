@@ -1,0 +1,41 @@
+<body>
+	<header>
+	<div class="navbar-fixed">
+		<nav class="grey darken-3">
+			<div class="nav-wrapper container">
+				<a href="#!" class="brand-logo">Logo</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="#amenities">Amenities</a></li>
+					<li><a href="#floorplans">Floor Plans</a></li>
+					<li><a href="#location">Location</a></li>
+					<li><a href="#contact">Contact</a></li>						        
+					<!-- <a class="apply waves-effect waves-light btn transparent">RESIDENT LOGIN</a> -->
+					<a class="waves-effect waves-light btn amber">APPLY NOW</a>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="#amenities">Amenities</a></li>
+					<li><a href="#floorplans">Floor Plans</a></li>
+					<li><a href="#location">Location</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<a class="waves-effect waves-light btn amber">APPLY NOW</a>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	</header>
+
+	<main>
+		<h1>Testing. Hello, tenants.</h1>
+	</main>
+
+	{{!-- Footer Partial --}}
+	{{> footer }}
+
+	<!--Import jQuery before materialize.js-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBRGeoK9_ttzqkK5ge-pOhjP-xxm3zbrY&callback=initMap"></script>
+	<script type="text/javascript" src="/javascripts/main.js"></script>      	
+</body>
