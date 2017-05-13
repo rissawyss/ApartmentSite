@@ -22,7 +22,6 @@ main {
 
 .location, .floor-plans {
 	margin-bottom:0px;
-	padding:20px;
 	padding-left:0px;
 	padding-bottom:0px;
 }
@@ -36,16 +35,14 @@ main {
 	z-index: 0;
 }
 
-#floorplanslider {
-	width: 45%;
-}
 
 #map {
     height: 400px;
-    width: 45%;    
+    width: 100%;    
 }
 
 img {
 	width: 100%;
 	height: auto;
+	max-height: 400px;
 }
