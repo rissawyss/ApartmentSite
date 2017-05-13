@@ -7,9 +7,9 @@ var passport = require("../config/passport");
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	// renderObj = { title: 'Landing Appartment Express' , message: 'And to the Jungle'};
-  res.render('index');
+	
+  res.render('index', {title:'Apartment Site'});
 });
-
 
 router.post('/prospect', function(req, res, next){
 	console.log(req.body);
