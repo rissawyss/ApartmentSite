@@ -34,7 +34,6 @@ router.get('/applicants', function(req, res, next) {
 router.get('/prospects', function(req, res, next) {
         db.Prospect.findAll().then(function(prospectData){
         res.render('manager', {prospectData});
-        console.log(prospectData);
         });
 });
 
