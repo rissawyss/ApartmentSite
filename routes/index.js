@@ -13,6 +13,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/prospect', function(req, res, next){
 	console.log(req.body);
+	req.body.bedrooms = req.body.bedrooms.toString();
 	//res.json(req.body);
 	db.Prospect.create(req.body).then(function(prospectData){
 		console.log(req.body);
