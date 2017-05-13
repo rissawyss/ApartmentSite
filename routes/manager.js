@@ -33,9 +33,9 @@ router.get('/applicants', function(req, res, next) {
 // get prospects
 router.get('/prospects', function(req, res, next) {
         db.Prospect.findAll().then(function(prospectData){
-        res.send(prospectData);            
+        res.render('manager', {prospectData});
+        console.log(prospectData);
         });
-
 });
 
 router.get('/contractors', function(req, res, next) {
