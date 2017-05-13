@@ -44,3 +44,7 @@ img {
 	height: auto;
 	max-height: 400px;
 }
+
+td {
+	min-width:100px;
+}
