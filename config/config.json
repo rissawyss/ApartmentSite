@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "mysql99",
+=======
+    "password": "root",
+>>>>>>> 92305fbe7182d2c5387e51d01afc6e1b9a49e6d9
     "database": "apartmentsite_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
