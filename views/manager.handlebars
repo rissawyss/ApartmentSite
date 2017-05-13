@@ -61,6 +61,35 @@
   </table>
 
 
+		<table>
+    <thead>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Telephone</th>
+      <th>Bedrooms</th>
+      <th>Move In Date</th>
+      <th>Message</th>
+      <th>Created At</th>
+      <th>Updated Ad</th>
+    </thead>
+    <tbody>
+      {{#each prospectData}}
+        <tr>
+          <td>{{first_name}}</td>
+          <td>{{last_name}}</td>
+          <td>{{email}}</td>
+          <td>{{telephone}}</td>
+          <td>{{bedrooms}}</td>
+          <td>{{move_in_date}}</td>
+          <td>{{message}}</td>
+          <td>{{createdAt}}</td>
+          <td>{{updatedAt}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
 		{{!-- Footer Partial --}}
 		{{> footer }}
 

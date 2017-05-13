@@ -32,7 +32,7 @@ router.get('/applicants', function(req, res, next) {
 
 // get prospects
 router.get('/prospects', function(req, res, next) {
-        db.Prospect.findAll().then(function(prospectData){   
+        db.Prospect.findAll().then(function(prospectData){
         res.render('manager', {prospectData});
         });
 });
