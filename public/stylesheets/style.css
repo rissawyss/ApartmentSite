@@ -14,16 +14,14 @@ main {
 	font-size: .8em;
 }
 
-.amenities {
-	height: 300px;
-	margin-bottom: 0px;
-	padding: 20px;
-}
-
-.location, .floor-plans {
+.amenities, .location, .floor-plans {
 	margin-bottom:0px;
 	padding-left:0px;
 	padding-bottom:0px;
+}
+
+.amenities {
+	padding: 0px 20px 0px 20px;
 }
 
 .lock {
@@ -42,7 +40,7 @@ main {
 }
 
 img {
-	width: 100%;
+	/*width: 100%;*/
 	height: auto;
 	max-height: 400px;
 }
