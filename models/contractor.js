@@ -1,6 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
   var Contractor = sequelize.define("Contractor", {
     business_name: DataTypes.STRING,
+    doing_business_as_name: DataTypes.STRING,
     // email: {
     //   type: DataTypes.STRING,
     //   allowNull: true,
@@ -10,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
     // },
     street_address: DataTypes.STRING,
     city: DataTypes.STRING,
-    zip_code: DataTypes.INTEGER(11).ZEROFILL,
+    zip_code: DataTypes.STRING,
     mailing_address: DataTypes.STRING,
     mailing_city: DataTypes.STRING,
     mailing_zip_code: DataTypes.INTEGER(11).ZEROFILL,

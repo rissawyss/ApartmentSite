@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
     apartment_number: DataTypes.STRING,
     city: DataTypes.STRING,
     state: DataTypes.STRING,
-    zip_code: DataTypes.INTEGER(11).ZEROFILL,
+    zip_code: DataTypes.STRING,
     no_of_occupants: DataTypes.INTEGER,
     rent: DataTypes.DECIMAL(10,2),
     rent_last_paid: DataTypes.DATEONLY,
