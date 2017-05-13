@@ -21,7 +21,6 @@ router.post('/prospect', function(req, res, next){
 	});
 });
 
-
 router.post('/applicants', function(req, res, next){
 	db.Applicant.create(req.body).then(function(applicantsData){
 		res.json(applicantsData); // send confirmation 
