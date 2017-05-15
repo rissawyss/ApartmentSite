@@ -8,10 +8,14 @@ main {
 	flex: 1 0 auto;
 }
 
-.apply {
+.apply,  {
 	border: 1.5px solid white;
 	font-weight: bold;
 	font-size: .8em;
+}
+
+.hero {
+	padding: 0px 20px 0px 20px;
 }
 
 .amenities, .location, .floor-plans {
@@ -37,6 +41,10 @@ main {
 #map {
     height: 400px;
     width: 100%;    
+}
+
+.slider .indicators .indicator-item {
+	background-color: white;
 }
 
 img {
