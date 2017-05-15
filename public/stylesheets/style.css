@@ -4,6 +4,10 @@ body {
 	flex-direction: column;
 }
 
+h3 {
+	font-weight: 900;
+}
+
 main {
 	flex: 1 0 auto;
 }
