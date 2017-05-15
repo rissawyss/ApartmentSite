@@ -6,6 +6,7 @@ router.get('/', function(req, res, next){
 	res.render('tenants');
 });
 
+// depending on the tenant certian work orders should show up
 router.get('/:tenant?', function(req, res, next){
 	// if (req.params.tenant){
 	// 	db.Tenant.findAll({
@@ -19,6 +20,7 @@ router.get('/:tenant?', function(req, res, next){
 	// }
 });
 
+
 router.get('/workorders/:wrkOrd?', function(req, res, next) {
 	// view with unit workorders
 	
@@ -26,8 +28,22 @@ router.get('/workorders/:wrkOrd?', function(req, res, next) {
 });
 
 router.post('/workorders', function(req, res, next){
-	// update view to reflect workorder created
+	db.WorkOrder.create({
+	}).then(function(){
+		res.render('/tenants')
+	})
 	res.render('tenants');
+});
+
+
+router.put('/workorders', function(req, res, next){
+	res.json('put')
+});
+
+
+
+router.delete('/workorders/:wrkOrd', function(req, res, next){
+	// archive work order
 });
 
 module.exports = router;
