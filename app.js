@@ -30,6 +30,7 @@ app.use(passport.session());
 var index = require('./routes/index');
 var tenants = require('./routes/tenants');
 var manager = require('./routes/manager');
+var applicant = require('./routes/applicant');
 
 //use handlebars engine as template engine, use 'main' as our base file
 var exphbs = require('express-handlebars');
@@ -50,6 +51,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use('/', index);
 app.use('/tenants', tenants);
 app.use('/manager', manager);
+app.use('/applicant', applicant);
 // app.use('/users', users);
 
 

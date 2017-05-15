@@ -45,20 +45,30 @@ router.get('/', function(req, res, next){
 
 
 // get tenant
-router.get('/tenants', function(req, res, next) {
+router.get('/tenants/:date?', function(req, res, next) {
+    if(req.params.date){
+        db.Tenant.findAll({
+            limit: 10,
+            order: [['lease_start', 'DESC']]
+        }).then(function(GoldieHawn){
+            // res.render('manager', {GoldieHawn});
+            res.json(GoldieHawn);
+        });
+    }
     console.log('hit tenant');
     db.Tenant.findAll().then(function(GoldieHawn){
-    res.render('tenants', {GoldieHawn});
+    res.render('manager', {GoldieHawn});
+    // res.json(GoldieHawn);
     });
 });
 
 // get applicants
 router.get('/applicants', function(req, res, next) {
-    db.Aplicant.findAll({}).then(function(aplicant){
+    db.Aplicant.findAll({}).then(function(GoldieHawn){
         var managerObj = {key: 'val',
                           key2: 'val2',
                           key3: 'val3'};
-    res.render('manager', managerObj);
+    res.render('manager', GoldieHawn);
 
 
     });
@@ -79,6 +89,10 @@ router.get('/contractors', function(req, res, next) {
 });
 
 router.post('/tenant', function(req, res, next) {
+    db.Tenant.create({
+    }).then(function(){
+        res.redirect('/manager');
+    });
     // res.render('manager');
 });
 
