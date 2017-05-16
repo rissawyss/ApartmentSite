@@ -16,8 +16,8 @@ exports.workorder_create_get = function(req, res, next){
 };
 
 exports.workorder_create_post = function(req, res, next){
-  res.render('registration', {
-    layout: 'main-registration'
+  db.WorkOrder.create(req.body).then(function(residentWorkorder){
+  	res.json('check the db for added work orders');
   });
 };
 

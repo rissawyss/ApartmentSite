@@ -22,18 +22,11 @@ router.get('/:tenant?', function(req, res, next){
 
 
 router.get('/workorders/:wrkOrd?', function(req, res, next) {
-	// view with unit workorders
-	
   res.render('tenants');
 });
 
 
-router.post('/workorders', function(req, res, next){
-	res.json('work order received');
-	// db.WorkOrder.create({
-	// }).then(function(){
-	// 	res.redirect('/tenants');
-	// });
+router.post('/workorders', resident_controller.workorder_create_post);
 });
 
 
