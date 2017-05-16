@@ -76,14 +76,14 @@ router.get('/applicants', function(req, res, next) {
 
 // get prospects
 router.get('/prospects', function(req, res, next) {
-        db.Prospect.findAll().then(function(GoldieHawn){
-        res.render('manager', {GoldieHawn});
+        db.Prospect.findAll().then(function(prospectsData){
+        res.render('manager', {prospectsData});
         });
 });
 
 router.get('/contractors', function(req, res, next) {
-        db.Contractor.findAll().then(function(GoldieHawn){
-            res.render('manager', {GoldieHawn});
+        db.Contractor.findAll().then(function(contractorsData){
+            res.render('manager', {contractorsData});
         });
 
 });
