@@ -2,11 +2,11 @@ var express = require('express');
 var router = express.Router();
 var db = require('../models');
 
-router.get('/', function(req, res, next){
-	res.render('tenants');
-});
+var resident_controller = require('../controllers/residentcontroller');
 
-// depending on the tenant certian work orders should show up
+router.get('/', resident_controller.workorder_create_get);
+
+// depending on the resident certian work orders should show up
 router.get('/:tenant?', function(req, res, next){
 	// if (req.params.tenant){
 	// 	db.Tenant.findAll({

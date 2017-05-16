@@ -90,7 +90,7 @@ router.get('/contractors', function(req, res, next) {
 });
 
 // create new tenant
-router.post('/tenant', function(req, res, next) {
+router.post('/tenants', function(req, res, next) {
     db.Tenant.create({
     }).then(function(){
         res.redirect('/manager');
@@ -116,7 +116,7 @@ router.post('/prospects', function(req, res, next) {
 router.post('/workorders', function(req, res, next){
     db.WorkOrder.create({
     }).then(function(){
-        res.redirect('/manager')
+        res.redirect('/manager');
     });
 });
 

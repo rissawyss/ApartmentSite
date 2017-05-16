@@ -46,6 +46,7 @@ router.post('/applicants', function(req, res, next){
 	});
 });
 
+
 // router.post('/api/tenantLogin', passport.authentication("local"), function(req, res){
 // 	res.json('/tenants');
 // });
