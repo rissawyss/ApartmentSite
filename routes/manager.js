@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var db = require('../models');
+var passport = require('../config/passport');
 
 function findAllCustom(table){
     db.table.findAll().then(function(rawDBdata){
