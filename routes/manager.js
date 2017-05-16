@@ -46,9 +46,9 @@ router.get('/tenants/:date?', function(req, res, next) {
         db.Tenant.findAll({
             limit: 10,
             order: [['lease_start', 'DESC']]
-        }).then(function(GoldieHawn){
+        }).then(function(tenantsData){
             // res.render('manager', {GoldieHawn});
-            res.json(GoldieHawn);
+            res.json(tenantsData);
         });
     }
     console.log('hit tenant');
