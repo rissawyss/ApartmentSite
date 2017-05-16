@@ -6,10 +6,10 @@
 		<main>			
 			<div class="row">
 				<div class="col s12 l12">				
-					<table class="striped responsive-table">
-						
-						{{#if prospectsData}}
-							<thead class="orange lighten-3">
+					{{!-- <table class="striped responsive-table"> --}}
+					<table class="bordered">	
+						{{#if prospectsData}}						
+							<thead class="blue lighten-2">
 							  <th>First Name</th>
 							  <th>Last Name</th>
 							  <th>Email</th>
@@ -24,21 +24,21 @@
 						  {{#each prospectsData}}						  	
 							<tbody>
 						    <tr>
-						      <td>{{first_name}}</td>
-						      <td>{{last_name}}</td>
+						      <td><strong>{{first_name}}</strong></td>
+						      <td><strong>{{last_name}}</strong></td>
 						      <td>{{email}}</td>
-						      <td>{{telephone}}</td>
+						      <td class="telephone-number">{{telephone}}</td>
 						      <td>{{bedrooms}}</td>
 						      <td>{{move_in_date}}</td>
 						      <td>{{message}}</td>
 						      <td>{{createdAt}}</td>
 						      <td>{{updatedAt}}</td>
-						      <td><button>Delete</button></td>			      
+						      <td><a class="btn-floating btn-medium waves-effect waves-light blue darken-4"><i class="material-icons">delete</i></a></td>   
 						    </tr>
-						  {{/each}}
+						  {{/each}}						  
 						{{/if}}
 						{{#if contractorsData}}
-							<thead class="orange lighten-3">
+							<thead class="blue lighten-2">
 								<th>Business Name</th>
 								<th>Doing Business As</th>
 								<th>Street Address</th>
@@ -48,6 +48,7 @@
 								<th>Description</th>
 								<th>Created At</th>
 								<th>Updated At</th>
+								<th></th>
 							</thead>
 						  {{#each contractorsData}}
 						  	<tbody>
@@ -61,6 +62,7 @@
 							<td>{{primary_naics_description}}</td>
 							<td>{{createdAt}}</td>
 							<td>{{updatedAt}}</td>
+							<td><a class="btn-floating btn-medium waves-effect waves-light blue darken-4"><i class="material-icons">mode_edit</i></a></td>
 							</tr>
 						   {{/each}}
 						{{/if}}						  
