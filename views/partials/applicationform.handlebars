@@ -1,43 +1,53 @@
 <section>
   <div class="row">
-    <form class="col s12 l6 offset-l3">
+    <form action='/applicant' method='post' class="col s12 l6 offset-l3">
       <div class="row">
-        <div class="input-field col s6">
-        <input id="first_name" type="text" class="validate">
-        <label for="first_name">First Name</label>
-      </div>
-      <div class="input-field col s6">
-        <input id="last_name" type="text" class="validate">
-        <label for="last_name">Last Name</label>
-      </div>
+          <div class="col s6 l6"><h5>Rental Application</h5></div>
+        </div>
+      <div class="row">
+        <div class="input-field col s12">
+        <input id="name" name="name" type="text" class="validate">
+        <label for="name">Name</label>
+      </div>      
       <div class="row">
         <div class="input-field col s12 l6">
-          <input id="email" type="email" class="validate">
+          <input id="email" name="email" type="email" class="validate">
           <label for="email">Email</label>
         </div>
         <div class="input-field col s12 l6">
-          <input id="email" type="email" class="validate">
-          <label for="email">Phone</label>
+          <input id="telephone" name="phone" type="email" class="validate">
+          <label for="telephone">Phone</label>
         </div>
       </div>
       </div>
         <div class="row">
           <div class="input-field col s6">
-            <input id="input_text" type="text" data-length="9">
-            <label for="input_text">Social Security #</label>
-          </div>
-          <div class="input-field col s6">
-            <input placeholder="Birthdate" type="date" class="datepicker">
+            <input placeholder="Birthdate" name="birth_date" type="date" class="datepicker">
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6 l6">
-            <input id="drivers_license" type="text">
+            <input id="drivers_license" name="dl_num" type="text">
             <label for="drivers_license">Driver's License #</label>
           </div>
           <div class="input-field col s3 l3">
-            <input id="state" type="text">
+            <input id="state" name="dl_state" type="text">
             <label for="state">State</label>
+          </div>                  
+        </div>
+        <div class="row">
+          <div class="input-field col s3" name="num_occupants">
+            <select>
+              <option value="" disabled selected>Select Number</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+            <label>Number of Occupants</label>
           </div>
         </div>
         <div class="row">
@@ -45,73 +55,188 @@
         </div>
         <div class="row">                  
           <div class="input-field col s9 l9">
-            <input id="current_street" type="text">
+            <input id="current_street" name="current_street" type="text">
             <label for="current_street">Street Address</label>
           </div>                  
         </div>
         <div class="row">
           <div class="input-field col s7 l7">
-            <input id="current_city" type="text">
+            <input id="current_city" name="current_city" type="text">
             <label for="current_city">City</label>
           </div>                  
           <div class="input-field col s2 l2">
-            <input id="current_state" type="text">
+            <input id="current_state" name="current_state" type="text">
             <label for="current_state">State</label>
           </div>
           <div class="input-field col s3 l3">
-            <input id="current_zip" type="text">
+            <input id="current_zip" name="current_zip" type="text">
             <label for="current_zip">Zip</label>
           </div>
         </div>
         <div class="row">
-          <div class="col s6 l6"><h5>Property Information</h5></div>
-        </div>
-        <div class="input-field col s12 l12">
-          <select>
-            <option value="" disabled selected>Do you plan on having a pet?</option>
-            <option value="1">Yes</option>
-            <option value="2">No</option>                    
-          </select>
-          <div class="col s12">
-            Pet(s) description:
-            <div class="input-field inline">
-              <input id="pet_descrip" type="text">
-              <label for="pet_descrip">Description</label>
-            </div>
-          </div>                  
-        </div>
+          <div class="input-field col s12">
+            <textarea id="textarea2" name="hear_about" class="materialize-textarea" data-length="120"></textarea>
+            <label for="textarea2">How did you hear about us?</label>
+          </div>
+        </div>                
         <div class="row">
           <div class="col s6 l6"><h5>Rental History</h5></div>
         </div>
+        <div class="row">
+          <div class="input-field col s9 l9">
+            <input id="prev_landlord" name="prev_landlord" type="text">
+            <label for="prev_landlord">Previous Landlord Name</label>
+          </div>
+          <div class="input-field col s3 l3">
+            <input id="prev_landlord_phone" name="prev_landlord_phone" type="text">
+            <label for="prev_landlord_phone">Phone Number</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s4 l4">
+            <input id="prev_rent" name="prev_rent" type="text">
+            <label for="prev_rent">Monthly Rent</label>
+          </div>
+          <div class="input-field col s4 l4">
+            <input placeholder="Date (From)" name="from_date" type="date" class="datepicker">                  
+          </div>
+          <div class="input-field col s4 l4">
+            <input placeholder="Date (To)" name="to_date" type="date" class="datepicker">                  
+          </div>
+        </div>
         <div class="row">                  
           <div class="input-field col s9 l9">
-            <input id="street1" type="text">
-            <label for="street1">Street Address</label>
+            <input id="prev_street" name="prev_street" type="text">
+            <label for="prev_street">Street Address</label>
           </div>                  
         </div>
         <div class="row">
           <div class="input-field col s7 l7">
-            <input id="city1" type="text">
-            <label for="city1">City</label>
+            <input id="prev_city" name="prev_city" type="text">
+            <label for="prev_city">City</label>
           </div>                  
           <div class="input-field col s2 l2">
-            <input id="state1" type="text">
-            <label for="state1">State</label>
+            <input id="prev_state" name="prev_state" type="text">
+            <label for="prev_state">State</label>
           </div>
           <div class="input-field col s3 l3">
-            <input id="zip1" type="text">
-            <label for="zip1">Zip</label>
+            <input id="prev_zip" name="prev_zip" type="text">
+            <label for="prev_zip">Zip</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 l12">
+            <textarea id="reason_left" name="reason_left" class="materialize-textarea" data-length="120"></textarea>
+            <label for="reason_left">Reason for leaving</label>
           </div>
         </div>
         <div class="row">
           <div class="col s6 l6"><h5>Employment History</h5></div>
         </div>
         <div class="row">
-          <div class="col s6 l6"><h5>Vehicles</h5></div>
+          <div class="input-field col s9 l9">
+            <input id="employer1" name="employer1" type="text">
+            <label for="employer1">Employer Name</label>
+          </div>
         </div>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-          <i class="material-icons right">send</i>
-        </button>                             
+        <div class="row">
+          <div class="input-field col s9 l9">
+            <input id="employer_city" name="employer_city" type="text">
+            <label for="employer_city">City</label>
+          </div>
+          <div class="input-field col s3 l3">
+            <input id="employer_state" name="employer_state" type="text">
+            <label for="employer_state">State</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s4 l4">
+            <input id="employer_phone" name="employer_phone" type="text">
+            <label for="employer_phone">Phone</label>
+          </div>
+          <div class="input-field col s4 l4">
+            <input placeholder="Date Employed (From)" name="emp_from_date" type="date" class="datepicker">                  
+          </div>
+          <div class="input-field col s4 l4">
+            <input placeholder="Date Employed (To)" name="emp_to_date" type="date" class="datepicker">                  
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s4 l4">
+            <input id="gross_salary" name="gross_salary" type="text">
+            <label for="gross_salary">Monthly Gross Salary</label>
+          </div>                  
+          <div class="input-field col s4 l4">
+            <input id="position_held" name="position_held" type="text">
+            <label for="position_held">Position Held</label>
+          </div>                  
+        </div>
+        <div class="row">
+          <div class="col s6 l6"><h5>References</h5></div>
+        </div>
+        <div class="row">
+          <div class="input-field col s8 l8">
+            <input id="ref_name" name="ref_name" type="text">
+            <label for="ref_name">Reference Name</label>
+          </div>                  
+          <div class="input-field col s4 l4">
+            <input id="ref_phone" name="ref_phone" type="text">
+            <label for="ref_phone">Phone</label>
+          </div>                  
+        </div>
+        <div class="row">
+          <div class="col s6 l6"><h5>Property Information</h5></div>
+        </div>
+        <div class="row">
+          <div class="input-field col s4 l4">
+            <input placeholder="Desired Move-in Date" name="desired_move_in" type="date" class="datepicker">                  
+          </div>
+        </div>                
+        <div class="row">
+          <div class="input-field col s8 l8">
+            <input id="vehicle" name="vehicle" type="text">
+            <label for="vehicle">Vehicle Description</label>
+          </div> 
+        </div>
+        <div class="row">
+          <div id="pet_answer" class="input-field col s6 l4">
+            <select>
+              <option value="" disabled selected>Yes or No?</option>
+              <option value="1">Yes</option>
+              <option value="2">No</option>                                       
+            </select>
+            <label for="pet_answer">Do you plan on having a pet?</label>                    
+          </div>
+          <div class="col s6 l8">                      
+              <div class="input-field inline">
+                <input id="pet_descrip" type="text">
+                <label for="pet_descrip">Describe pet</label>
+              </div>
+            </div>                  
+          </div>
+          <div class="row">
+          <div class="input-field col s6" name="num_occupants_under18">
+            <select>
+              <option value="" disabled selected>Select Number</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+            <label>Number of Occupants under age 18</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s6 l6">
+            <button class="btn waves-effect waves-light amber" type="submit" name="action">Submit
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </div>
+                                     
     </form>
   </div>
 </section>
