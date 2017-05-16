@@ -18,16 +18,5 @@ $(document).ready(function() {
     $('.slider').slider();
         
 
-    console.log("ready!");
-
-    $('#contractor_button').on('click', function(event){
-        event.preventDefault();
-        testdata = 'test data promise';
-        $.get('/manager/contractors', function(testdata){
-            console.log('test contractor');
-            console.log(testdata);
-        });
-    });
-
-    
+    console.log("ready!");    
 });

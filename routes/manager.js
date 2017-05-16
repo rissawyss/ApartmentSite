@@ -57,18 +57,18 @@ router.get('/tenants/:date?', function(req, res, next) {
 
 // get work orders
 router.get('/workorders', function(req, res, next){
-    db.WorkOrder.findAll().then(function(GoldieHawn){
-        res.render('manager', {GoldieHawn})
+    db.WorkOrder.findAll().then(function(workordersData){
+        res.render('manager', {workordersData});
     });
 });
 
 // get applicants
 router.get('/applicants', function(req, res, next) {
-    db.Aplicant.findAll({}).then(function(GoldieHawn){
+    db.Aplicant.findAll({}).then(function(applicantsData){
         var managerObj = {key: 'val',
                           key2: 'val2',
                           key3: 'val3'};
-    res.render('manager', GoldieHawn);
+    res.render('manager', applicantsData);
 
 
     });
@@ -81,6 +81,7 @@ router.get('/prospects', function(req, res, next) {
         });
 });
 
+// get contractors
 router.get('/contractors', function(req, res, next) {
         db.Contractor.findAll().then(function(contractorsData){
             res.render('manager', {contractorsData});
