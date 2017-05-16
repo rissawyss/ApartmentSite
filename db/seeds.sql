@@ -28,3 +28,11 @@ VALUES
 ('General Greivous', 'general@general.com', 'Planet Kalee', '5000', 'Planet', 'Kalee', '00423', 2, 5000, '2017-08-01', '2018-07-31', 0, 0),
 ('Darth Maul', 'darth@maul.com', 'Lucas ipsum dolor Street', '72', 'Nelvaanian Watto', 'Yowza', '00423', 2, 5000, '2017-08-01', '2018-07-31', 0, 0),
 ('Captain Phasma', 'phasma@phasma.com', 'Anthos jerec bardan kendal', '22000', 'Lars coruscant', 'Greeata', '50042', 4, 7000, '2017-09-01', '2018-08-30', 0, 0);
+
+
+INSERT INTO residents (name, email, street_address, apartment_number, city, state, zip_code, no_of_occupants, rent, lease_start, lease_end, createdAt, updatedAt)
+
+VALUES
+('General Greivous', 'general@general.com', 'Planet Kalee', '5000', 'Planet', 'Kalee', '00423', 2, 5000, '2017-08-01', '2018-07-31', 0, 0),
+('Darth Maul', 'darth@maul.com', 'Lucas ipsum dolor Street', '72', 'Nelvaanian Watto', 'Yowza', '00423', 2, 5000, '2017-08-01', '2018-07-31', 0, 0),
+('Captain Phasma', 'phasma@phasma.com', 'Anthos jerec bardan kendal', '22000', 'Lars coruscant', 'Greeata', '50042', 4, 7000, '2017-09-01', '2018-08-30', 0, 0);
