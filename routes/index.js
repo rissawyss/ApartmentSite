@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
+
+
 var db = require('../models');
 var passport = require("../config/passport");
-
+var authcontroller = require('../controllers/authcontroller');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -10,6 +12,23 @@ router.get('/', function(req, res, next) {
 	
   res.render('index', {title:'Apartment Site'});
 });
+
+router.get('/login', authcontroller.login);
+
+router.get('/signin', authcontroller.signin);
+
+router.get('/signup', authcontroller.signup_get);
+
+router.post('/signup', authcontroller.signup);
+
+router.get('/logout', authcontroller.logout);
+
+// router.get('/tenantDash', isLoggedIn, authcontroller.dashbord);
+
+
+
+
+
 
 router.post('/prospect', function(req, res, next){
 	console.log(req.body);

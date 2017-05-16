@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var db = require('../models');
+var passport = require('../config/passport');
 
 router.get('/api/:managerQuery', function(req, res, next){
     console.log(req.params.managerQuery);
