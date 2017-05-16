@@ -3,3 +3,4 @@ views/archive
 /config/*.json
 config/config.json
 config/*.json
+config/config.json
