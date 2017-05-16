@@ -8,10 +8,10 @@ exports.workorder_update_put = function(req, res, next){
 
 
 
-router.put('/workorders', function(req, res, next){
-	res.json('put');
-});
+// router.put('/workorders', function(req, res, next){
+// 	res.json('put');
+// });
 
-router.delete('/workorders/:wrkOrd', function(req, res, next){
-	// archive work order
-});
+// router.delete('/workorders/:wrkOrd', function(req, res, next){
+// 	// archive work order
+// });
