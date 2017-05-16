@@ -3,6 +3,16 @@
 		<h5 class="center amber-text darken-4">Maintenance Request</h5>
 		<div class="row">
 			<form action='/workorders' method='post'>
+				<div class="row">
+			        <div class="input-field col s10 l4 offset-l3">
+				        <input id="resident_name" name="name" type="text" class="validate">
+				        <label for="resident_name">Name</label>
+				    </div>
+				    <div class="input-field col s2 l2">
+				        <input id="apartment_number" name="apartment_number" type="text" class="validate">
+				        <label for="apartment_number">Apt. No.</label>				    
+					</div>
+				</div>				
 				<div class="input-field col s12 l6 offset-l3">
 					<textarea id="textarea1" class="materialize-textarea" name="request"></textarea>
 					<label for="textarea1">Description of the problem</label>
