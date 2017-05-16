@@ -18,10 +18,5 @@ $(document).ready(function() {
     $('.slider').slider();
         
 
-    console.log("ready!");
-
-
-
-
-    
+    console.log("ready!");    
 });
