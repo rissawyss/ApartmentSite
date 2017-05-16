@@ -52,8 +52,8 @@ router.get('/tenants/:date?', function(req, res, next) {
         });
     }
     console.log('hit tenant');
-    db.Tenant.findAll().then(function(GoldieHawn){
-    res.render('manager', {GoldieHawn});
+    db.Tenant.findAll().then(function(tenantsData){
+    res.render('manager', {tenantsData});
     // res.json(GoldieHawn);
     });
 });
