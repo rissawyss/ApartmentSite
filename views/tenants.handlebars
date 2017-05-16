@@ -27,39 +27,7 @@
 
 
 	<main>
-		<h1>Tenants</h1>		
-		<table>
-		    <thead>
-		      <th>Name</th>
-		      <th>Email</th>
-		      <th>Street Address</th>
-		      <th>Apt No</th>
-		      <th>City</th>
-		      <th>State</th>
-		      <th>Zip</th>
-		      <th>No of Occupants</th>
-		      <th>Rent</th>
-		      <th>lease Start</th>
-		      <th>Lease End</th>
-		    </thead>
-		    <tbody>
-		      {{#each GoldieHawn}}
-		        <tr>
-		          <td>{{name}}</td>
-		          <td>{{email}}</td>
-		          <td>{{street_address}}</td>
-		          <td>{{apartment_number}}</td>
-		          <td>{{city}}</td>
-		          <td>{{state}}</td>
-		          <td>{{zip_code}}</td>
-		          <td>{{no_of_occupants}}</td>
-		          <td>${{rent}}</td>
-		          <td>{{lease_start}}</td>
-		          <td>{{lease_end}}</td>
-		        </tr>
-		      {{/each}}
-		    </tbody>
-		  </table>
+		{{> maintenancerequest }}
 	</main>
 
 	{{!-- Footer Partial --}}
