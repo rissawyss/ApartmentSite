@@ -3,6 +3,9 @@ var router = express.Router();
 var db = require('../models');
 var passport = require('../config/passport');
 
+var manager_controller = require('../controllers/managercontroller');
+
+
 router.get('/api/:managerQuery', function(req, res, next){
     console.log(req.params.managerQuery);
 
