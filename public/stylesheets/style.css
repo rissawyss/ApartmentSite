@@ -64,3 +64,7 @@ img {
 td {
 	min-width:100px;
 }
+
+.telephone-number {
+	min-width:120px;
+}
