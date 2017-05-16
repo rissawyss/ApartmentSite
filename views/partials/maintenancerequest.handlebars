@@ -4,17 +4,17 @@
 		<div class="row">
 			<form action='/workorders' method='post'>
 				<div class="input-field col s12 l6 offset-l3">
-					<textarea id="textarea1" class="materialize-textarea"></textarea>
+					<textarea id="textarea1" class="materialize-textarea" name="request"></textarea>
 					<label for="textarea1">Description of the problem</label>
 				</div>
 				<div class="col s12 l6 offset-l3">
 					<h5>Authorized to enter unit?</h5>
 					<p>
-						<input name="group1" type="radio" id="authorize-yes" />
+						<input name="permission_to_enter" type="radio" id="authorize-yes" />
 						<label for="authorize-yes">Yes</label>
 					</p>
 					<p>
-						<input name="group1" type="radio" id="authorize-no" />
+						<input name="permission_to_enter" type="radio" id="authorize-no" />
 						<label for="authorize-no">No</label>
 					</p>
 					<br>
