@@ -21,14 +21,4 @@ exports.workorder_create_post = function(req, res, next){
   });
 };
 
-exports.workorde_update_put = function(req, res, next){
-  req.logout();
-  res.redirect('/');
-};
-
-exports.workorder_delete_post = function(req, res, next){
-  res.render('applicant', {
-    layout: 'main'
-  });
-};
 
