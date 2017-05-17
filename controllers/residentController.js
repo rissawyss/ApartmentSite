@@ -5,7 +5,7 @@ var passport = require('../config/passport');
 
 exports.workorder_create_get = function(req, res, next){
 	if(req.params.residentID){
-		res.redirect('/');
+		res.render('/');
 		// res.json('hello you have reached the server and back' + req.params.residentID);
 		// console.log('database id ' + req.params.residentID);
 		return;
