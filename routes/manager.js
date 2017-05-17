@@ -68,7 +68,7 @@ router.get('/workorders', function(req, res, next){
 
 // get applicants
 router.get('/applicants', function(req, res, next) {
-    db.Aplicant.findAll().then(function(applicantData){
+    db.Applicant.findAll().then(function(applicantData){
     res.render('manager', {applicantData});
 
     });
