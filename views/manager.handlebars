@@ -108,7 +108,78 @@
 							<td><a id={{id}} class="btn-floating btn-medium waves-effect waves-light blue darken-4"><i class="material-icons">mode_edit</i></a></td>
 							</tr>
 						   {{/each}}
-						{{/if}}										  
+						{{/if}}
+						{{#if applicantData}}
+							<thead class="blue lighten-2">
+								<th>Name</th>
+								<th>Email</th>
+								<th>Phone</th>
+								<th>Birthdate</th>
+								<th>DL#</th>
+								<th>DL State</th>
+								<th># occ.</th>
+								<th>Current St.</th>
+								<th>Current City</th>
+								<th>Current State</th>
+								<th>Current Zip</th>
+								<th>Heard about</th>
+								<th>Prev. Landlord</th>
+								<th>Landlord phone</th>
+								<th>Prev. Rent</th>
+								<th>From Date</th>
+								<th>Prev. Street</th>
+								<th>Prev. State</th>
+								<th>Reason Left</th>
+								<th>Employer</th>
+								<th>City</th>
+								<th>State</th>
+								<th>Phone</th>
+								<th>From Date</th>
+								<th>To Date</th>
+								<th>Gross Salary</th>
+								<th>Ref Name</th>
+								<th>Ref Phone</th>
+								<th>Desired Move-in</th>
+								<th>Vehicle</th>
+							</thead>
+						  {{#each applicantData}}
+						  	<tbody>
+						  	<tr>
+							<td>{{name}}</td>
+							<td>{{email}}</td>
+							<td>{{phone}}</td>
+							<td>{{birth_date}}</td>
+							<td>{{dl_num}}</td>
+							<td>{{dl_state}}</td>
+							<td>{{num_occupants}}</td>
+							<td>{{current_street}}</td>
+							<td>{{current_city}}</td>
+							<td>{{current_state}}</td>
+							<td>{{current_zip}}</td>
+							<td>{{hear_about}}</td>
+							<td>{{prev_landlord}}</td>
+							<td>{{prev_landlord_phone}}</td>
+							<td>{{prev_rent}}</td>
+							<td>{{from_date}}</td>
+							<td>{{prev_street}}</td>
+							<td>{{prev_state}}</td>
+							<td>{{reason_left}}</td>
+							<td>{{employer1}}</td>
+							<td>{{employer_city}}</td>
+							<td>{{employer_state}}</td>
+							<td>{{employer_phone}}</td>
+							<td>{{emp_from_date}}</td>
+							<td>{{emp_to_date}}</td>
+							<td>{{gross_salary}}</td>
+							<td>{{position_held}}</td>
+							<td>{{ref_name}}</td>
+							<td>{{ref_phone}}</td>
+							<td>{{desired_move_in}}</td>
+							<td>{{vehicle}}</td>							
+							<td><a class="btn-floating btn-medium waves-effect waves-light blue darken-4"><i class="material-icons">mode_edit</i></a></td>
+							</tr>
+						   {{/each}}
+						{{/if}}										  										  
 						</tbody>
 					</table>
 				</div>
