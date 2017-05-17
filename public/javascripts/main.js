@@ -24,7 +24,8 @@ $(document).ready(function() {
         console.log($(this));
         var queryparam = '/resident/'+residentID;
         $.get(queryparam, function(data) {
-           console.log(data);
+           // console.log(data + ' +front end code');
+           $('body').appned(data);
         });
     }
 
