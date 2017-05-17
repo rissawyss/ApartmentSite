@@ -67,11 +67,11 @@ router.get('/workorders', function(req, res, next){
 
 // get applicants
 router.get('/applicants', function(req, res, next) {
-    db.Aplicant.findAll({}).then(function(applicantsData){
+    db.Aplicant.findAll().then(function(applicantData){
         var managerObj = {key: 'val',
                           key2: 'val2',
                           key3: 'val3'};
-    res.render('manager', applicantsData);
+    res.render('manager', applicantData);
 
 
     });

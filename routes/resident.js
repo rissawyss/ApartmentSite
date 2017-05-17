@@ -28,7 +28,7 @@ router.get('/workorders/:wrkOrd?', function(req, res, next) {
 
 // router.post('/workorders', resident_controller.workorder_create_post);
 router.post('/workorders', function(req, res, next) {
-	res.json('thank you ');
+	// res.json('thank you ');
 	db.WorkOrder.create(req.body).then(function(residentWorkorder){
 		res.json(residentWorkorder);
 	});
