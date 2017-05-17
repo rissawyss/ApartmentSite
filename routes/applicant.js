@@ -2,18 +2,11 @@ var express = require('express');
 var router = express.Router();
 var db = require('../models');
 
+var applicant_controller = require('../controllers/applicantcontroller');
 
 
-router.get('/', function(req, res, next) {
-	// view with unit workorders
-	
-  res.render('applicant');
-  // res.json('this is going to the application')
-});
 
-router.post('/', function(req, res, next){
-	console.log('thank you for applying to the cabin');
-	res.render('index');
-});
+router.get('/',applicant_controller.applicant_create_get);
+router.post('/', applicant_controller.applicant_create_post); 
 
 module.exports = router;

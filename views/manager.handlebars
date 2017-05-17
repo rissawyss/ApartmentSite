@@ -23,7 +23,7 @@
 							</thead>
 						  {{#each prospectsData}}						  	
 							<tbody>
-						    <tr>
+						    <tr id={{id}}>
 						      <td><strong>{{first_name}}</strong></td>
 						      <td><strong>{{last_name}}</strong></td>
 						      <td>{{email}}</td>
@@ -105,6 +105,7 @@
 							<td>{{parking_permit_no}}</td>
 							<td>{{parking_permit_status}}</td>
 							<td><a class="btn-floating btn-medium waves-effect waves-light blue darken-4"><i class="material-icons">mode_edit</i></a></td>
+							<td><a id={{id}} class="btn-floating btn-medium waves-effect waves-light blue darken-4"><i class="material-icons">mode_edit</i></a></td>
 							</tr>
 						   {{/each}}
 						{{/if}}
