@@ -7,6 +7,7 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
+    apartment_number: DataTypes.STRING,
     submitted: DataTypes.DATE,
     status: DataTypes.STRING,
     last_activity: DataTypes.DATE,
@@ -32,11 +33,9 @@ module.exports = function(sequelize, DataTypes) {
       // We're saying that we want our Tenant to have Work Orders
       classMethods: {
         associate: function(models) {
-          // An Resident (foreignKey) is required or a Work Order can't be made
+          // A Resident (foreignKey) is required or a Work Order can't be made
           WorkOrder.belongsTo(models.Tenant, {
-            foreignKey: {
-              allowNull: false
-            }
+            foreignKey: 'apartment_number'
           });
         }
       },
