@@ -28,7 +28,6 @@ app.use(passport.session());
 
 
 var index = require('./routes/index');
-// var tenants = require('./routes/tenants');
 var resident = require('./routes/resident');
 var manager = require('./routes/manager');
 var applicant = require('./routes/applicant');
@@ -50,7 +49,6 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 app.use('/', index);
-// app.use('/tenants', tenants);
 app.use('/resident', resident);
 app.use('/manager', manager);
 app.use('/applicant', applicant);
