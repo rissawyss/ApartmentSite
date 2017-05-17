@@ -30,9 +30,11 @@ VALUES
 ('Captain Phasma', 'phasma@phasma.com', 'Anthos jerec bardan kendal', '22000', 'Lars coruscant', 'Greeata', '50042', 4, 7000, '2017-09-01', '2018-08-30', 0, 0);
 
 
-INSERT INTO residents (name, email, street_address, apartment_number, city, state, zip_code, no_of_occupants, rent, lease_start, lease_end, createdAt, updatedAt)
+INSERT INTO applicants (name, email, phone, birth_date, dl_num, dl_state, num_occupants, current_street, current_city, current_state, current_zip, hear_about, prev_landlord, prev_landlord_phone, prev_rent, from_date, to_date, prev_street, prev_state, prev_zip, reason_left, employer1, employer_city, employer_state, employer_phone, emp_from_date, emp_to_date, gross_salary, position_held, ref_name, ref_phone, desired_move_in, vehicle, pet_answer, pet_descrip, num_occupants_under18, createdAt, updatedAt)
 
 VALUES
-('General Greivous', 'general@general.com', 'Planet Kalee', '5000', 'Planet', 'Kalee', '00423', 2, 5000, '2017-08-01', '2018-07-31', 0, 0),
-('Darth Maul', 'darth@maul.com', 'Lucas ipsum dolor Street', '72', 'Nelvaanian Watto', 'Yowza', '00423', 2, 5000, '2017-08-01', '2018-07-31', 0, 0),
-('Captain Phasma', 'phasma@phasma.com', 'Anthos jerec bardan kendal', '22000', 'Lars coruscant', 'Greeata', '50042', 4, 7000, '2017-09-01', '2018-08-30', 0, 0);
+('Bob Smith', 'bob@smith.com', '541-232-2232', '1980-04-25', 'F255543', 'CA', 3, '555 Mulberry', 'Los Angeles', 'CA', '94555', 'relative recommended', 'Property Manager Company', '347-322-0098', 3350, '2015-01-01', '2016-01-31', '7662 Riverside Drive', 'CA', '92222', 'bigger space', 'CDE Company', 'Los Angeles', 'CA', '310-555-5555', '2015-12-01', '2017-05-16', 50000, 'Manager', 'Marshall Jones', '310-555-6767', '2017-06-01', 'Toyota Prius', 1, 'beagle', 1, 0, 0),
+
+('Jane Kennedy', 'jane@kenndy.com', '456-768-7768', '1968-12-03', 'EE78292', 'AZ', 2, '625 Broadway', 'Phoenix', 'AZ', '85234', 'facebook ad', 'Landlords Inc.', '516-999-6516', 4500, '2017-02-01', '2017-04-30', '1601 University Ave', 'NY', '10463', 'relocation', 'XYZ Inc', 'Phoenix', 'AZ', '456-555-5555', '2010-09-29', '2017-05-16', 65000, 'Director', 'Sarah Connor', '456-555-2300', '2017-09-01', 'Ford Escort', 0, null, 0, 0, 0),
+
+('Ross Whedon', 'ross@whedon.com', '255-389-3389', '1975-07-14', '87883829', 'GA', 1, '1720 Clancey', 'Alberta', 'GA', '62325', 'referred by a friend', 'ABC Management Co.', '727-824-8278', 1798, '2015-08-01', '2016-08-01', '120 Elgar Place', 'TX', '21271', 'job move', 'Widget Company', 'Alberta', 'GA', '555-555-5555', '2005-03-26', '2017-05-16', 45000, 'Associate', 'Mark Lewis', '555-555-0299', '2017-10-01', 'Honda Accord', 0, null, 0, 0, 0);
