@@ -4,10 +4,10 @@ var db = require('../models');
 
 var resident_controller = require('../controllers/residentcontroller');
 
-router.get('/', resident_controller.workorder_create_get);
+router.get('/:residentID?', resident_controller.workorder_create_get);
 
 // depending on the resident certian work orders should show up
-router.get('/:tenant?', function(req, res, next){
+// router.get('/:residentID?', function(req, res, next){
 	// if (req.params.tenant){
 	// 	db.Tenant.findAll({
 	// 		where:{
@@ -18,7 +18,7 @@ router.get('/:tenant?', function(req, res, next){
 	// 		res.json(results);
 	// 	});
 	// }
-});
+// });
 
 
 router.get('/workorders/:wrkOrd?', function(req, res, next) {

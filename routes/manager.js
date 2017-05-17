@@ -61,7 +61,8 @@ router.get('/tenants/:date?', function(req, res, next) {
 // get work orders
 router.get('/workorders', function(req, res, next){
     db.WorkOrder.findAll().then(function(workordersData){
-        res.render('manager', {workordersData});
+        res.json(workordersData);
+        // res.render('manager', {workordersData});
     });
 });
 
