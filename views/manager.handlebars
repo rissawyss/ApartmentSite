@@ -33,7 +33,7 @@
 						      <td>{{message}}</td>
 						      <td>{{createdAt}}</td>
 						      <td>{{updatedAt}}</td>
-						      <td><a class="btn-floating btn-medium waves-effect waves-light blue darken-4"><i class="material-icons">delete</i></a></td>  
+						      <td><a class="btn-floating btn-medium waves-effect waves-light red darken-4" href="http://localhost:8080/manager/prospects/delete/{{id}}"><i class="material-icons">delete</i></a></td>  
 						    </tr>
 						  {{/each}}						  
 						{{/if}}
@@ -62,7 +62,7 @@
 							<td>{{primary_naics_description}}</td>
 							<td>{{createdAt}}</td>
 							<td>{{updatedAt}}</td>
-							<td><a class="btn-floating btn-medium waves-effect waves-light red darken-4"><i class="material-icons">delete</i></a></td>
+							<td><a class="btn-floating btn-medium waves-effect waves-light red darken-4" href="http://localhost:8080/manager/contractors/delete/{{id}}"><i class="material-icons">delete</i></a></td>
 							</tr>
 						   {{/each}}
 						{{/if}}
