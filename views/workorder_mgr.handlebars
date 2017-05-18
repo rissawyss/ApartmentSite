@@ -37,11 +37,11 @@
 				</div>
 		    </div>		    
 			{{!-- display extra input fields for manager --}}
-			<form action='resident/workorders' method='POST' class="workorderform" id="workorderform">
+			<form action='http://localhost:8080/manager/workorders/update/1' method='POST' class="workorderform" id="workorderform">
 				<div class="row">
 					<div class="input-field col s6 l6 offset-l3">
-					<textarea id="last_activity" class="materialize-textarea" name="last_activity"></textarea>
-					<label for="last_activity">Last Activity</label>
+					<textarea id="notes" class="materialize-textarea" name="notes"></textarea>
+					<label for="notes">Notes</label>
 					</div>
 				</div>
 				<div class="row">
@@ -90,7 +90,7 @@
 				<div class="row">
 					<div class="col l3 offset-l3">
 						<h6>Date completed</h6>
-						<input type="date" class="datepicker">
+						<input id="date_completed" type="date" class="datepicker" name="date_completed" value="date_completed">
 					</div>
 				</div>
 				<div class="row">
