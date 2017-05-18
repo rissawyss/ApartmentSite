@@ -5,143 +5,216 @@ var passport = require('../config/passport');
 
 var manager_controller = require('../controllers/managercontroller');
 
-
-router.get('/api/:managerQuery', function(req, res, next){
-    console.log(req.params.managerQuery);
-
-    // function
-    switch(req.params.managerQuery){
-    case 'prospectsData':
-        console.log('prospector data');
-        db.Prospect.findAll().then(function(rawDBdata){
-            res.json(rawDBdata);
-            // res.redirect('/manager');
-        });
-        break;
-    case 'contractorsData':
-        console.log('contractor data');
-        db.Contractor.findAll().then(function(rawDBdata){
-            res.json(rawDBdata);   
-        });
-        break;
-    case 'tenantsData':
-        console.log('tenant data');
-        db.Tenant.findAll().then(function(rawDBdata){
-            res.json(rawDBdata);
-        });
-        break;
-    }
-
-
-});
-
-router.get('/', function(req, res, next){
+// GET 0)
+router.get('/', function(req, res, next) {
     res.render('manager');
 });
 
-
-// get tenant
-router.get('/tenants/:date?', function(req, res, next) {
-    if(req.params.date){
-        db.Tenant.findAll({
-            limit: 10,
-            order: [['lease_start', 'DESC']]
-        }).then(function(tenantsData){
-            // res.render('manager', {GoldieHawn});
-            res.json(tenantsData);
+// GET 1) get tenant
+router.get('/tenants/:id?', function(req, res, next) {
+    console.log('hit tenant');
+    if (req.params.id) {
+        db.Tenant.findOne({
+            where: {
+                id: req.params.id
+            },
+            include: [db.WorkOrder]
+        }).then(function(dbTenant) {
+            res.json(dbTenant);
         });
     }
-    console.log('hit tenant');
-    db.Tenant.findAll().then(function(tenantsData){
-    res.render('manager', {tenantsData});
-    // res.json(GoldieHawn);
+    db.Tenant.findAll().then(function(tenantsData) {
+        res.render('manager', { tenantsData });
     });
 });
 
-// get work orders
-router.get('/workorders', function(req, res, next){
-    db.WorkOrder.findAll().then(function(workordersData){
-        res.json(workordersData);
-        // res.render('manager', {workordersData});
+// GET 2 ) get work orders
+router.get('/workorders', function(req, res, next) {
+    db.WorkOrder.findAll().then(function(workordersData) {
+        console.log(workordersData)
+        res.render('manager', {workordersData});
     });
 });
 
-// get applicants
+// GET 3) get applicants
 router.get('/applicants', function(req, res, next) {
-    db.Applicant.findAll().then(function(applicantData){
-    res.render('manager', {applicantData});
+    db.Applicant.findAll().then(function(applicantData) {
+        res.render('manager', { applicantsData });
 
     });
 });
 
-// get prospects
+// GET 4) get prospects
 router.get('/prospects', function(req, res, next) {
-        db.Prospect.findAll().then(function(prospectsData){
-        res.render('manager', {prospectsData});
-        });
+    db.Prospect.findAll().then(function(prospectsData) {
+        res.render('manager', { prospectsData });
+    });
 });
 
-// get contractors
+// GET 5) get contractors
 router.get('/contractors', function(req, res, next) {
-        db.Contractor.findAll().then(function(contractorsData){
-            res.render('manager', {contractorsData});
-        });
+    db.Contractor.findAll().then(function(contractorsData) {
+        res.render('manager', { contractorsData });
+    });
 
 });
 
-// create new tenant
+// POST 1) post new tenant
 router.post('/tenants', function(req, res, next) {
-    db.Tenant.create({
-    }).then(function(){
-        res.redirect('/manager');
+    db.Tenant.create().then(function() {
+        res.render('manager');
     });
     // res.render('manager');
 });
-// create new applicant
-router.post('/applicants', function(req, res, next) {
-    // res.render('manager');
+
+// POST 2) post new workorder
+router.post('/workorders', function(req, res, next) {
+    db.WorkOrder.create().then(function() {
+        res.render('manager');
+    });
 });
 
-// create new prospect
+// POST 3) post new applicant
+router.post('/applicants', function(req, res, next) {
+    res.render('manager');
+});
+
+// POST 4) post new prospect
 router.post('/prospects', function(req, res, next) {
     db.Prospect.create({
         name: req.body.name,
         last_name: req.body.last
-    }).then(function(){
-        // res.redirect('/managers')
+    }).then(function() {
+        res.render('manager');
     });
 });
 
-// create new workorder
-router.post('/workorders', function(req, res, next){
-    db.WorkOrder.create({
-    }).then(function(){
-        res.redirect('/manager');
+// POST 5) post new contractor
+router.post('/contractors', function(req, res, next){
+    db.Contractors.create().then(function() {
+        res.render('manager');
     });
 });
 
+// PUT 1) update tenant
+router.put('/tenants/update/:id', function(req, res, next){
+    db.Tenant.update({
+        updatevalue: 'newvalue'
+    },{
+        where:{
+            id: req.params.id
+        }
+    }).then(function(){
+        res.render('manager');
+    });
+});
 
-// update prospect
-router.put('/prospects/update/:id', function(req, res, next){
+// PUT 2) update workorder
+router.put('/workorders/update/:id', function(req, res, next){
+    db.WorkOrder.update({
+        updatevalue: 'newvalue'
+    },{
+        where:{
+            id: req.params.id
+        }
+    }).then(function(){
+        res.render('manager');
+    });
+});
+
+// PUT 3) update applicant
+router.put('/applicants/update/:id', function(req, res, next){
+    db.Applicant.update({
+        updatevalue: 'newvalue'
+    }, {
+        where:{
+            id: req.params.id
+        }
+    }).then(function(){
+        res.render('manager');
+    });
+});
+
+// PUT 4) update prospect
+router.put('/prospects/update/:id', function(req, res, next) {
     db.Prospect.update({
         updatevalue: 'newvalue'
-    },{where:{
-        id:req.params.id
-    }}
-    ).then(function(){
-        res.redirect('/managers');
+    }, {
+        where: {
+            id: req.params.id
+        }
+    }).then(function() {
+        res.render('manager');
     });
 });
 
-// delete prospect
-router.delete('/prospects/update/:id', function(req, res, next) {
+// PUT 5) update contractor
+router.put('/contractors/update/:id', function(req, res, next){
+    db.Contractor.update({
+        updatevalue: 'newvalue'
+    }, {
+        where: {
+            id: req.params.id
+        }
+    }).then(function() {
+        res.render('manager');
+    });
+});
+
+// DELETE 1) delete tenant
+router.delete('/tenants/delete/:id', function(req, res, next){
+    db.Tenant.destroy({
+        where: {
+            id: req.params.id
+        }
+    }).then(function() {
+        res.render('manager');
+    });
+});
+
+// DELETE 2) delete workorder
+router.delete('/workorders/delete/:id', function(req, res, next){
+    db.WorkOrder.destroy({
+        where: {
+            id: req.params.id
+        }
+    }).then(function() {
+        res.render('manager');
+    });
+});
+
+// DELETE 3) delete applicant 
+router.delete('/applicants/delete/:id', function(req, res, next){
+    db.Applicant.destroy({
+        where: {
+            id: req.params.id
+        }
+    }).then(function(){
+        res.render('manager');
+    });
+});
+
+// DELETE 4) delete prospect
+router.delete('/prospects/delete/:id', function(req, res, next) {
     //run burger.js logic of deleteOne(table,id,callback)
-    db.Prospect.destroy(
-        {where:{
-            id:req.params.id
-        }}).then(function(){
-            res.redirect('/managers');
-        });
+    db.Prospect.destroy({
+        where: {
+            id: req.params.id
+        }
+    }).then(function() {
+        res.render('manager');
+    });
+});
+
+// DELETE 5) delete contractor
+router.delete('/contractors/delete/:id', function(req, res, next){
+    db.Contractor.destroy({
+        where: {
+            id: req.params.id
+        }
+    }).then(function() {
+        res.render('manager');
+    });
 });
 
 module.exports = router;

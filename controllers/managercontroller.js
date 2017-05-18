@@ -7,6 +7,11 @@ exports.workorder_update_put = function(req, res, next){
 };
 
 
+exports.workorder_update_delete = function(req, res, next){
+
+};
+
+
 
 // router.put('/workorders', function(req, res, next){
 // 	res.json('put');
