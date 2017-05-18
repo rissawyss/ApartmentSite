@@ -17,9 +17,20 @@
 	</header>
 
 	<main>		
-		{{#if workordersData}}
-			<p>{{permssion_to_enter}}</p>
-			{{!-- {{>maintenancerequest_mgr}} --}}
+		{{#if workordersData}}			
+			{{!-- display the clicked on work order form with resident's sumbitted data filled in --}}
+			<div class="row">
+		        <div class="input-field col s12">
+		          <input disabled value="{{request}}" id="disabledRequest" type="text" class="materialize-textarea">
+		          <label for="disabledRequest">Request</label>
+		        </div>
+		    </div>
+		    <div class="col s12 l6 offset-l3">
+				<h5>Authorized to enter unit? Answer: </h5><p>{{permission_to_enter}}</p>									
+			</div>
+			{{!-- display extra input fields for manager --}}
+			
+			
 		
 		{{/if}}
 	</main>
