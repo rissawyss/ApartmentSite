@@ -16,12 +16,11 @@
 	</div>
 	</header>
 
-	<main>
+	<main>		
 		{{#if workordersData}}
-		<div>
-			{{> maintenancerequest_mgr }}
-		</div>
-		{{!-- Maintenance Request Form --}}
+			<p>{{permssion_to_enter}}</p>
+			{{!-- {{>maintenancerequest_mgr}} --}}
+		
 		{{/if}}
 	</main>
 
