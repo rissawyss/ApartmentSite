@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     street_address: DataTypes.STRING,
-    // apartment_number: DataTypes.STRING,
+    apartment_number: DataTypes.STRING,
     city: DataTypes.STRING,
     state: DataTypes.STRING,
     zip_code: DataTypes.STRING,

@@ -8,7 +8,6 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     apartment_number: DataTypes.STRING,
-    submitted: DataTypes.DATE,
     status: DataTypes.STRING,
     last_activity: DataTypes.DATE,
     service_cost: DataTypes.DECIMAL(10,2),
