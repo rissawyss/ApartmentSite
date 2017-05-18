@@ -98,16 +98,17 @@ router.post('/contractors', function(req, res, next){
 
 // PUT 1) update tenant
 router.put('/tenants/update/:id', function(req, res, next){
-    db.Tenant.update({
-        updatevalue: 'newvalue'
-    },{
+    db.Tenant.update(
+        req.body,
+        {
         where:{
             id: req.params.id
         }
     }).then(function(){
-        res.render('manager');
+        res.json('put 1: req.body test');
     });
 });
+
 
 // PUT 2) update workorder
 router.put('/workorders/update/:id', function(req, res, next){
