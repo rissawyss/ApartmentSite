@@ -23,7 +23,8 @@
 							</thead>
 						  {{#each prospectsData}}						  	
 							<tbody>
-						    <tr id={{id}}>
+						    <tr>
+						      <td><a class="btn-floating btn-medium waves-effect waves-light red darken-4" href="http://localhost:8080/manager/prospects/delete/{{id}}"><i class="material-icons">delete</i></a></td> 
 						      <td><strong>{{first_name}}</strong></td>
 						      <td><strong>{{last_name}}</strong></td>
 						      <td>{{email}}</td>
@@ -32,8 +33,7 @@
 						      <td>{{move_in_date}}</td>
 						      <td>{{message}}</td>
 						      <td>{{createdAt}}</td>
-						      <td>{{updatedAt}}</td>
-						      <td><a class="btn-floating btn-medium waves-effect waves-light red darken-4" href="http://localhost:8080/manager/prospects/delete/{{id}}"><i class="material-icons">delete</i></a></td>  
+						      <td>{{updatedAt}}</td>						       
 						    </tr>
 						  {{/each}}						  
 						{{/if}}
@@ -53,16 +53,16 @@
 						  {{#each contractorsData}}
 						  	<tbody>
 						  	<tr>
-							<td>{{business_name}}</td>
-							<td>{{doing_business_as_name}}</td>
-							<td>{{street_address}}</td>
-							<td>{{city}}</td>
-							<td>{{zip_code}}</td>
-							<td>{{naics}}</td>
-							<td>{{primary_naics_description}}</td>
-							<td>{{createdAt}}</td>
-							<td>{{updatedAt}}</td>
-							<td><a class="btn-floating btn-medium waves-effect waves-light red darken-4" href="http://localhost:8080/manager/contractors/delete/{{id}}"><i class="material-icons">delete</i></a></td>
+							  	<td><a class="btn-floating btn-medium waves-effect waves-light red darken-4" href="http://localhost:8080/manager/contractors/delete/{{id}}"><i class="material-icons">delete</i></a></td>
+								<td>{{business_name}}</td>
+								<td>{{doing_business_as_name}}</td>
+								<td>{{street_address}}</td>
+								<td>{{city}}</td>
+								<td>{{zip_code}}</td>
+								<td>{{naics}}</td>
+								<td>{{primary_naics_description}}</td>
+								<td>{{createdAt}}</td>
+								<td>{{updatedAt}}</td>							
 							</tr>
 						   {{/each}}
 						{{/if}}
@@ -89,6 +89,7 @@
 						  {{#each tenantsData}}
 						  	<tbody>
 						  	<tr>
+						  		<td><a class="btn-floating btn-medium waves-effect waves-light red darken-4" href="http://localhost:8080/manager/tenants/delete/{{id}}"><i class="material-icons">delete</i></a></td>
 								<td><strong>{{name}}</strong></td>
 								<td>{{email}}</td>
 								<td>{{street_address}}</td>
@@ -104,8 +105,7 @@
 								<td>{{lease_end}}</td>
 								<td>{{parking_permit}}</td>
 								<td>{{parking_permit_no}}</td>
-								<td>{{parking_permit_status}}</td>
-								<td><a class="btn-floating btn-medium waves-effect waves-light red darken-4" href="http://localhost:8080/manager/tenants/delete/{{id}}"><i class="material-icons">delete</i></a></td>
+								<td>{{parking_permit_status}}</td>								
 							</tr>
 						   {{/each}}
 						{{/if}}
@@ -146,6 +146,7 @@
 						  {{#each applicantsData}}
 						  	<tbody>
 						  	<tr>
+						  		<td><a class="btn-floating btn-medium waves-effect waves-light blue darken-4"><i class="material-icons">mode_edit</i></a></td>
 								<td>{{name}}</td>
 								<td>{{email}}</td>
 								<td>{{phone}}</td>
@@ -176,16 +177,16 @@
 								<td>{{ref_name}}</td>
 								<td>{{ref_phone}}</td>
 								<td>{{desired_move_in}}</td>
-								<td>{{vehicle}}</td>
-								<td><a class="btn-floating btn-medium waves-effect waves-light blue darken-4"><i class="material-icons">mode_edit</i></a></td>
+								<td>{{vehicle}}</td>								
 							</tr>
 						   {{/each}}
 						{{/if}}
 						{{#if workordersData}}
 							<thead class="blue lighten-2">
+								<th></th>
+								<th></th>
 								<th>Request</th>
 								<th>Apt #</th>
-								<th>Submitted</th>
 								<th>Last Activity</th>
 								<th>Permission to Enter</th>
 								<th>Status</th>
@@ -195,16 +196,15 @@
 								<th>Created At</th>
 								<th>Updated At</th>
 								<th>Contractor Id</th>
-								<th>Tenant Id</th>
-								<th></th>
-								<th></th>
+								<th>Tenant Id</th>								
 							</thead>
 							{{#each workordersData}}
 							<tbody>
 								<tr>
+									<td><a class="btn-floating btn-medium waves-effect waves-light blue darken-4" href="http://localhost:8080/manager/workorders/{{id}}"><i class="material-icons">mode_edit</i></a></td>
+									<td><a class="btn-floating btn-medium waves-effect waves-light red darken-4" href="http://localhost:8080/manager/workorders/delete/{{id}}"><i class="material-icons">delete</i></a></td>
 									<td>{{request}}</td>
 									<td>{{apartment_number}}</td>
-									<td>{{submitted}}</td>
 									<td>{{last_activity}}</td>
 									<td>{{permission_to_enter}}</td>
 									<td>{{status}}</td>
@@ -214,9 +214,7 @@
 									<td>{{createdAt}}</td>
 									<td>{{updatedAt}}</td>
 									<td>{{contractorId}}</td>
-									<td>{{tenantId}}</td>
-									<td><a class="btn-floating btn-medium waves-effect waves-light red darken-4" href="http://localhost:8080/manager/workorders/delete/{{id}}"><i class="material-icons">delete</i></a></td>	
-									<td><a class="btn-floating btn-medium waves-effect waves-light blue darken-4"><i class="material-icons">mode_edit</i></a></td>
+									<td>{{tenantId}}</td>									
 								</tr>										  										  
 							</tbody>
 							{{/each}}

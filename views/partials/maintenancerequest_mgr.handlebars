@@ -1,5 +1,4 @@
-<div class="row">
-	{{!-- <form class="col s12  workorderform"> --}}
+<div class="row">	
 		<h5 class="center amber-text darken-4">Maintenance Request</h5>
 		<div class="row">
 			<form action='resident/workorders' method='POST' class="workorderform" id="workorderform">
@@ -10,7 +9,7 @@
 				    </div> --}}
 				    <div class="input-field col s2 l2 offset-l3">
 				        <input id="apartment_number" name="apartment_number" type="text" class="validate">
-				        <label for="apartment_number">Apt. No.</label>				    
+				        <label for="apartment_number">Apt No.</label>				    
 					</div>
 				</div>				
 				<div class="input-field col s12 l6 offset-l3">
@@ -18,25 +17,15 @@
 					<label for="textarea1">Description of the problem</label>
 				</div>
 				<div class="col s12 l6 offset-l3">
-					<h5>Authorized to enter unit?</h5>
-					<p>
-						<input name="permission_to_enter" type="radio" id="authorize-yes" value="yes"/>
-						<label for="authorize-yes">Yes</label>
-					</p>
-					<p>
-						<input name="permission_to_enter" type="radio" id="authorize-no" value="no"/>
-						<label for="authorize-no">No</label>
-					</p>
-					<br>
+					<h5>Authorized to enter unit? Answer: </h5><p>{{permission_to_enter}}</p>									
 				</div>
 				<div class="row">
 					<div class="col s12 l6 offset-l3">
-						<button class="waves-effect waves-light btn amber darken-2" type="submit" name="action">Submit
+						<button class="waves-effect waves-light btn amber darken-2" type="submit" name="action">Update
                       		<i class="material-icons right">send</i>
                     	</button>
 					</div>
 				</div>
 			</form>
-		</div>
-	{{!-- </form> --}}
+		</div>	
 </div>
