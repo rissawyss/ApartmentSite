@@ -17,8 +17,12 @@
 	</header>
 
 	<main>
+		{{#if workordersData}}
+		<div>
+			{{> maintenancerequest_mgr }}
+		</div>
 		{{!-- Maintenance Request Form --}}
-		{{> maintenancerequest_mgr }}
+		{{/if}}
 	</main>
 
 	{{!-- Footer Partial --}}
