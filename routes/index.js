@@ -7,9 +7,7 @@ var passport = require("../config/passport");
 var authcontroller = require('../controllers/authcontroller');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-	// renderObj = { title: 'Landing Appartment Express' , message: 'And to the Jungle'};
-	
+router.get('/', function(req, res, next) {	
   res.render('index', {title:'Apartment Site'});
 });
 
@@ -23,17 +21,9 @@ router.post('/signup', authcontroller.signup);
 
 router.get('/logout', authcontroller.logout);
 
-// router.get('/tenantDash', isLoggedIn, authcontroller.dashbord);
-
-
-
-
-
-
 router.post('/prospect', function(req, res, next){
 	console.log(req.body);
 	req.body.bedrooms = req.body.bedrooms.toString();
-	//console.log("test body: " + req.body);
 	db.Prospect.create(req.body).then(function(prospectData){
 		console.log(req.body);
 		res.redirect('/'); // how should we respond to the prospect?
@@ -42,7 +32,8 @@ router.post('/prospect', function(req, res, next){
 
 router.post('/applicants', function(req, res, next){
 	db.Applicant.create(req.body).then(function(applicantsData){
-		res.json(applicantsData); // send confirmation 
+			console.log(req.body);
+		// res.json(applicantsData); // send confirmation 
 	});
 });
 
