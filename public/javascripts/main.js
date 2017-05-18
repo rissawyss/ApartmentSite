@@ -16,19 +16,17 @@ $(document).ready(function() {
     $('.modal').modal();
     // slideshow 
     $('.slider').slider();
-    $(document).on("click", ".blue", getResidentInfo);
+    $(document).on("click", ".blue", getTenantInfo);
 
-    function getResidentInfo() {
-        var residentID = $(this).attr('id');
+    function getTenantInfo() {
+        var tenantID = $(this).attr('id');
         console.log('that button was clicked');
         console.log($(this));
-        var queryparam = '/resident/'+residentID;
+        var queryparam = '/manager/tenants/delete/' + tenantID;
         $.get(queryparam, function(data) {
-           // console.log(data + ' +front end code');
-           $('body').appned(data);
+            // console.log(data + ' +front end code');
+            $('body').append(data);
         });
-    }
-
 
 
     console.log("ready!");
