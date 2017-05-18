@@ -11,7 +11,12 @@ module.exports = function(sequelize, DataTypes) {
     telephone: DataTypes.STRING,
     bedrooms: DataTypes.STRING,
     move_in_date: DataTypes.STRING,
-    message: DataTypes.TEXT
+    message: DataTypes.TEXT,
+    soft_delete: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false
+    }
   });
   return Prospect;
 };
