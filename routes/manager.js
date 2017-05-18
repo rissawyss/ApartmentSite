@@ -29,11 +29,22 @@ router.get('/tenants/:id?', function(req, res, next) {
 });
 
 // GET 2 ) get work orders
-router.get('/workorders', function(req, res, next) {
+router.get('/workorders/:id?', function(req, res, next) {
+    if(req.params.id){
+        db.WorkOrder.findOne({
+            where: {
+                id:req.params.id
+         }}
+        ).then(function(workordersData){
+            // res.json(workordersData);
+            res.render('workorder_mgr', {workordersData});
+        });
+    }else{
     db.WorkOrder.findAll().then(function(workordersData) {
-        console.log(workordersData)
+        console.log(workordersData);
         res.render('manager', {workordersData});
     });
+    }
 });
 
 // GET 3) get applicants
@@ -112,9 +123,9 @@ router.put('/tenants/update/:id', function(req, res, next){
 
 // PUT 2) update workorder
 router.put('/workorders/update/:id', function(req, res, next){
-    db.WorkOrder.update({
-        updatevalue: 'newvalue'
-    },{
+    db.WorkOrder.update(
+        req.body,
+        {
         where:{
             id: req.params.id
         }
@@ -125,9 +136,9 @@ router.put('/workorders/update/:id', function(req, res, next){
 
 // PUT 3) update applicant
 router.put('/applicants/update/:id', function(req, res, next){
-    db.Applicant.update({
-        updatevalue: 'newvalue'
-    }, {
+    db.Applicant.update(
+        req.body,
+        {
         where:{
             id: req.params.id
         }
@@ -138,9 +149,9 @@ router.put('/applicants/update/:id', function(req, res, next){
 
 // PUT 4) update prospect
 router.put('/prospects/update/:id', function(req, res, next) {
-    db.Prospect.update({
-        updatevalue: 'newvalue'
-    }, {
+    db.Prospect.update(
+        req.body,
+        {
         where: {
             id: req.params.id
         }
@@ -151,9 +162,9 @@ router.put('/prospects/update/:id', function(req, res, next) {
 
 // PUT 5) update contractor
 router.put('/contractors/update/:id', function(req, res, next){
-    db.Contractor.update({
-        updatevalue: 'newvalue'
-    }, {
+    db.Contractor.update(
+        req.body,
+        {
         where: {
             id: req.params.id
         }
