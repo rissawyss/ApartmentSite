@@ -175,7 +175,9 @@ router.post('/contractors/update/:id', function(req, res, next){
 
 // DELETE 1) delete tenant
 router.get('/tenants/delete/:id', function(req, res, next){
-    db.Tenant.destroy({
+    db.Tenant.update({
+        soft_delete: true,
+    }, {
         where: {
             id: req.params.id
         }
@@ -186,7 +188,9 @@ router.get('/tenants/delete/:id', function(req, res, next){
 
 // DELETE 2) delete workorder
 router.get('/workorders/delete/:id', function(req, res, next){
-    db.WorkOrder.destroy({
+    db.WorkOrder.update({
+        soft_delete: true,
+    }, {
         where: {
             id: req.params.id
         }
@@ -197,7 +201,9 @@ router.get('/workorders/delete/:id', function(req, res, next){
 
 // DELETE 3) delete applicant 
 router.get('/applicants/delete/:id', function(req, res, next){
-    db.Applicant.destroy({
+    db.Applicant.update({
+        soft_delete: true,
+    }, {
         where: {
             id: req.params.id
         }
@@ -223,6 +229,8 @@ router.get('/prospects/delete/:id', function(req, res, next) {
 // DELETE 5) delete contractor
 router.get('/contractors/delete/:id', function(req, res, next){
     db.Contractor.destroy({
+        soft_delete: true,
+    }, {
         where: {
             id: req.params.id
         }
