@@ -45,7 +45,12 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: false
     },
     pet_descrip: DataTypes.STRING,
-    num_occupants_under18: DataTypes.INTEGER
+    num_occupants_under18: DataTypes.INTEGER,
+    soft_delete: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false
+    }
   });
   return Applicant;
 };
