@@ -29,32 +29,68 @@
 		          <input disabled value="{{request}}" id="disabledRequest" type="text" class="materialize-textarea">
 		          <label for="disabledRequest">Request</label>
 		        </div>
-		        <div class="col s12 l6 offset-l3">
-					<strong>Authorized to enter unit?</strong>
-					<p>{{permission_to_enter}}</p>									
+		        <div class="row">
+			        <div class="col s12 l6 offset-l3">
+						<strong>Authorized to enter unit?</strong>
+						<p>{{permission_to_enter}}</p>									
+					</div>
 				</div>
 		    </div>		    
 			{{!-- display extra input fields for manager --}}
 			<form action='resident/workorders' method='POST' class="workorderform" id="workorderform">
-				<div class="input-field col s12 l6 offset-l3" name="status">
-					<select>
-						<option value="" disabled selected>Needs Review</option>
-						<option value="Reviewed">Reviewed</option>
-						<option value="Vendor Scheduled">Vendor Scheduled</option>						
-						<option value="Request Invoices">Invoices Required</option>
-						<option value="Request Invoices">Bill Tenant</option>
-						<option value="Icebox">Icebox</option>						
-					</select>
-					<label>Work Order Status</label>
+				<div class="row">
+					<div class="input-field col s6 l6 offset-l3">
+					<textarea id="last_activity" class="materialize-textarea" name="last_activity"></textarea>
+					<label for="last_activity">Last Activity</label>
+					</div>
 				</div>
-				<div class="col l6 offset-l3">
-					<div class="switch">
-						<label>
-						In Progress
-						<input type="checkbox">
-						<span class="lever"></span>
-						Complete
-						</label>
+				<div class="row">
+					<div class="input-field col s3 l2 offset-l3">
+			          <input id="service_cost" type="text" class="validate" name="service_cost">
+			          <label for="service_cost">Service Cost $</label>
+			        </div>
+		        </div>
+				<div class="row">
+					<div class="input-field col s12 l6 offset-l3" name="status">
+						<select>
+							<option value="" disabled selected>Needs Review</option>
+							<option value="Reviewed">Reviewed</option>
+							<option value="Vendor Scheduled">Vendor Scheduled</option>						
+							<option value="Request Invoices">Invoices Required</option>
+							<option value="Request Invoices">Bill Tenant</option>
+							<option value="Icebox">Icebox</option>						
+						</select>
+						<label>Work Order Status</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col l3 offset-l3">
+						<div class="switch">
+							<h6>Invoices Paid?</h6>
+							<label>
+							Payment required
+							<input type="checkbox" name="paid" value="true">
+							<span class="lever"></span>
+							Paid
+							</label>
+						</div>
+					</div>
+					<div class="col l3">
+						<div class="switch">
+							<h6>Is work complete?</h6>
+							<label>
+							In Progress
+							<input type="checkbox" name="completed" value="true">
+							<span class="lever"></span>
+							Complete
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col l3 offset-l3">
+						<h6>Date completed</h6>
+						<input type="date" class="datepicker">
 					</div>
 				</div>
 				<div class="row">
