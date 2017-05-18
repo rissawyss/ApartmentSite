@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     street_address: DataTypes.STRING,
-    apartment_number: DataTypes.STRING,
+    // apartment_number: DataTypes.STRING,
     city: DataTypes.STRING,
     state: DataTypes.STRING,
     zip_code: DataTypes.STRING,
@@ -25,14 +25,22 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: false
     },
     parking_permit_no: DataTypes.INTEGER,
-    parking_permit_status: DataTypes.STRING
+    parking_permit_status: DataTypes.STRING,
+    soft_delete: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false
+    }
   },
     // Here we'll pass a second "classMethods" object into the define method
     // This is for any additional configuration we want to give our models
     {
       // We're saying that we want our Tenant to have Work Orders
       classMethods: {
-        associate: function(models) {Tenant.hasMany(models.WorkOrder)}
+        associate: function(models) {
+          Tenant.hasMany(models.WorkOrder);
+          // Tenant.belongsTo(models.Apartment);
+        }
       }
     }
   );

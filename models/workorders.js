@@ -27,22 +27,19 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       defaultValue: false
     },
-    date_completed: DataTypes.DATEONLY
+    date_completed: DataTypes.DATEONLY,
+    soft_delete: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false
+    }
   },
     {
       // We're saying that we want our Tenant to have Work Orders
       classMethods: {
         associate: function(models) {
           // A Resident (foreignKey) is required or a Work Order can't be made
-          WorkOrder.belongsTo(models.Tenant, {
-            foreignKey: 'apartment_number'
-          });
-        }
-      },
-      // We're saying that we want our Contractor to have Work Orders
-      classMethods: {
-        associate: function(models) {
-          // A Contractor (foreignKey) can be associated with a Work Order
+          WorkOrder.belongsTo(models.Tenant);
           WorkOrder.belongsTo(models.Contractor, {
             foreignKey: {
               allowNull: true
