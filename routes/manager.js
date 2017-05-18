@@ -163,58 +163,58 @@ router.put('/contractors/update/:id', function(req, res, next){
 });
 
 // DELETE 1) delete tenant
-router.delete('/tenants/delete/:id', function(req, res, next){
+router.get('/tenants/delete/:id', function(req, res, next){
     db.Tenant.destroy({
         where: {
             id: req.params.id
         }
     }).then(function() {
-        res.render('manager');
+        res.redirect('/manager/tenants');
     });
 });
 
 // DELETE 2) delete workorder
-router.delete('/workorders/delete/:id', function(req, res, next){
+router.get('/workorders/delete/:id', function(req, res, next){
     db.WorkOrder.destroy({
         where: {
             id: req.params.id
         }
     }).then(function() {
-        res.render('manager');
+        res.redirect('/manager/workorders');
     });
 });
 
 // DELETE 3) delete applicant 
-router.delete('/applicants/delete/:id', function(req, res, next){
+router.get('/applicants/delete/:id', function(req, res, next){
     db.Applicant.destroy({
         where: {
             id: req.params.id
         }
     }).then(function(){
-        res.render('manager');
+        res.redirect('/manager/applicants');
     });
 });
 
 // DELETE 4) delete prospect
-router.delete('/prospects/delete/:id', function(req, res, next) {
+router.get('/prospects/delete/:id', function(req, res, next) {
     //run burger.js logic of deleteOne(table,id,callback)
     db.Prospect.destroy({
         where: {
             id: req.params.id
         }
     }).then(function() {
-        res.render('manager');
+        res.redirect('/manager/prospects');
     });
 });
 
 // DELETE 5) delete contractor
-router.delete('/contractors/delete/:id', function(req, res, next){
+router.get('/contractors/delete/:id', function(req, res, next){
     db.Contractor.destroy({
         where: {
             id: req.params.id
         }
     }).then(function() {
-        res.render('manager');
+        res.redirect('/manager/contractors');
     });
 });
 
