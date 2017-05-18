@@ -22,7 +22,7 @@ $(document).ready(function() {
         var tenantID = $(this).attr('id');
         console.log('that button was clicked');
         console.log($(this));
-        var queryparam = '/tenant/' + tenantID;
+        var queryparam = '/manager/tenants/delete/' + tenantID;
         $.get(queryparam, function(data) {
             // console.log(data + ' +front end code');
             $('body').append(data);
