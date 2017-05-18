@@ -49,7 +49,7 @@ router.get('/workorders/:id?', function(req, res, next) {
 
 // GET 3) get applicants
 router.get('/applicants', function(req, res, next) {
-    db.Applicant.findAll().then(function(applicantData) {
+    db.Applicant.findAll().then(function(applicantsData) {
         res.render('manager', { applicantsData });
 
     });
