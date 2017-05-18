@@ -209,7 +209,9 @@ router.get('/applicants/delete/:id', function(req, res, next){
 // DELETE 4) delete prospect
 router.get('/prospects/delete/:id', function(req, res, next) {
     //run burger.js logic of deleteOne(table,id,callback)
-    db.Prospect.destroy({
+    db.Prospect.update({
+        soft_delete: true,
+    }, {
         where: {
             id: req.params.id
         }
