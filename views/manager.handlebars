@@ -187,7 +187,6 @@
 								<th></th>
 								<th>Request</th>
 								<th>Apt #</th>
-								<th>Submitted</th>
 								<th>Last Activity</th>
 								<th>Permission to Enter</th>
 								<th>Status</th>
@@ -205,8 +204,7 @@
 									<td><a class="btn-floating btn-medium waves-effect waves-light blue darken-4" href="http://localhost:8080/manager/workorders/{{id}}"><i class="material-icons">mode_edit</i></a></td>
 									<td><a class="btn-floating btn-medium waves-effect waves-light red darken-4" href="http://localhost:8080/manager/workorders/delete/{{id}}"><i class="material-icons">delete</i></a></td>
 									<td>{{request}}</td>
-									<td>{{apartment_number}}</td>
-									<td>{{submitted}}</td>
+									<td>{{apartment_number}}</td>									
 									<td>{{last_activity}}</td>
 									<td>{{permission_to_enter}}</td>
 									<td>{{status}}</td>
@@ -216,8 +214,7 @@
 									<td>{{createdAt}}</td>
 									<td>{{updatedAt}}</td>
 									<td>{{contractorId}}</td>
-									<td>{{tenantId}}</td>
-									
+									<td>{{tenantId}}</td>									
 								</tr>										  										  
 							</tbody>
 							{{/each}}
