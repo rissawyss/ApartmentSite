@@ -228,7 +228,7 @@ router.get('/prospects/delete/:id', function(req, res, next) {
 
 // DELETE 5) delete contractor
 router.get('/contractors/delete/:id', function(req, res, next){
-    db.Contractor.destroy({
+    db.Contractor.update({
         soft_delete: true,
     }, {
         where: {
