@@ -28,7 +28,6 @@ $(document).ready(function() {
             $('body').append(data);
         });
 
-    }
 
     console.log("ready!");
 });

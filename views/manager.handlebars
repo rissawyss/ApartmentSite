@@ -5,7 +5,7 @@
 
 		<main>			
 			<div class="row">
-				<div class="col s12 l12">				
+				<div class="col s12 l12">					
 					{{!-- <table class="striped responsive-table"> --}}
 					<table class="bordered">	
 						{{#if prospectsData}}						
@@ -62,7 +62,7 @@
 							<td>{{primary_naics_description}}</td>
 							<td>{{createdAt}}</td>
 							<td>{{updatedAt}}</td>
-							<td><a class="btn-floating btn-medium waves-effect waves-light blue darken-4"><i class="material-icons">mode_edit</i></a></td>
+							<td><a class="btn-floating btn-medium waves-effect waves-light red darken-4"><i class="material-icons">delete</i></a></td>
 							</tr>
 						   {{/each}}
 						{{/if}}
@@ -89,7 +89,7 @@
 						  {{#each tenantsData}}
 						  	<tbody>
 						  	<tr>
-								<td>{{name}}</td>
+								<td><strong>{{name}}</strong></td>
 								<td>{{email}}</td>
 								<td>{{street_address}}</td>
 								<td>{{apartment_number}}</td>
@@ -105,7 +105,7 @@
 								<td>{{parking_permit}}</td>
 								<td>{{parking_permit_no}}</td>
 								<td>{{parking_permit_status}}</td>
-								<td><a id={{id}} class="btn-floating btn-medium waves-effect waves-light blue darken-4"><i class="material-icons">mode_edit</i></a></td>
+								<td><a id={{id}} class="btn-floating btn-medium waves-effect waves-light red darken-4"><i class="material-icons">delete</i></a></td>
 							</tr>
 						   {{/each}}
 						{{/if}}
