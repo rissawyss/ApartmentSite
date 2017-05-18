@@ -108,7 +108,7 @@ router.post('/contractors', function(req, res, next){
 });
 
 // PUT 1) update tenant
-router.put('/tenants/update/:id', function(req, res, next){
+router.post('/tenants/update/:id', function(req, res, next){
     db.Tenant.update(
         req.body,
         {
@@ -122,7 +122,7 @@ router.put('/tenants/update/:id', function(req, res, next){
 
 
 // PUT 2) update workorder
-router.put('/workorders/update/:id', function(req, res, next){
+router.post('/workorders/update/:id', function(req, res, next){
     db.WorkOrder.update(
         req.body,
         {
@@ -135,7 +135,7 @@ router.put('/workorders/update/:id', function(req, res, next){
 });
 
 // PUT 3) update applicant
-router.put('/applicants/update/:id', function(req, res, next){
+router.post('/applicants/update/:id', function(req, res, next){
     db.Applicant.update(
         req.body,
         {
@@ -148,7 +148,7 @@ router.put('/applicants/update/:id', function(req, res, next){
 });
 
 // PUT 4) update prospect
-router.put('/prospects/update/:id', function(req, res, next) {
+router.post('/prospects/update/:id', function(req, res, next) {
     db.Prospect.update(
         req.body,
         {
@@ -161,7 +161,7 @@ router.put('/prospects/update/:id', function(req, res, next) {
 });
 
 // PUT 5) update contractor
-router.put('/contractors/update/:id', function(req, res, next){
+router.post('/contractors/update/:id', function(req, res, next){
     db.Contractor.update(
         req.body,
         {
