@@ -102,12 +102,13 @@ td {
 .mgr_icons {
 	height:90px;
 	width: auto;
+	z-index:101;
 }
 
-#mgr_background {
+/*#mgr_background {
 	background-image: url("../public/images/pool1-min.png");
 
-}
+}*/
 
 .pool_img {
 	width:100%;	
