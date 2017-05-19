@@ -49,6 +49,8 @@ router.get('/workorders/:id?', function(req, res, next) {
                 id:req.params.id
          }}
         ).then(function(workordersData){
+            // console.log(workordersData.dataValues);
+            var workordersData = workordersData.dataValues;
             console.log(workordersData);
             res.render('workorder_mgr', {workordersData});
         });
