@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     apartment_number: DataTypes.STRING,
     status: DataTypes.STRING,
-    last_activity: DataTypes.DATE,
+    notes: DataTypes.TEXT,
     service_cost: DataTypes.DECIMAL(10,2),
     permission_to_enter: {
       type: DataTypes.STRING,
