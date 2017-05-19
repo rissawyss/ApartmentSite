@@ -58,7 +58,7 @@ main {
 img {
 	/*width: 100%;*/
 	height: auto;
-	max-height: 400px;
+	
 }
 
 td {
@@ -67,4 +67,26 @@ td {
 
 .telephone-number {
 	min-width:120px;
+}
+
+.slider .slides{
+	background-color: transparent;	
+}
+
+img {
+	width: 100%;
+}
+
+#heroContainer {
+	position: relative;
+}
+
+#siteTitle {
+	z-index: 100px;
+	font-weight:900;
+	color: white;
+	position: absolute;
+	top: 40%;
+	left:33%;
+	text-shadow: 3px 3px black;
 }
