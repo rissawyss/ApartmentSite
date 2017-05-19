@@ -90,13 +90,18 @@ td {
 	z-index: 100;
 	top: 100px;
 	position: absolute;
+	width:100%;
 }
+
 
 .iconbox {
 	width: 100px;
 	height: 100px;
-	background-color: #ccc;
+}
 
+.mgr_icons {
+	height:90px;
+	width: auto;
 }
 
 #mgr_background {
