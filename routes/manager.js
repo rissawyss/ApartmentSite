@@ -37,7 +37,7 @@ router.get('/workorders/:id?', function(req, res, next) {
          }}
         ).then(function(workordersData){
             // res.json(workordersData);
-            res.render('workorder_mgr', {workordersData});
+            res.render('workorder_mgr', {workordersData});            
         });
     }else{
     db.WorkOrder.findAll().then(function(workordersData) {
