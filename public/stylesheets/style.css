@@ -73,26 +73,12 @@ td {
 	background-color: transparent;	
 }
 
-img {
+#amenitiesimg {
 	width: 100%;
 }
 
-#heroContainer {
-	position: relative;
+.fatborder {
+	width:100%;
+	height:30px;
 }
 
-#siteTitle {
-	z-index: 100;
-	font-weight:900;
-	color: white;
-	position: absolute;
-	text-align:center;
-	top: 30%;
-	left:30%;		
-	text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
-	font-size:4em; 
-}
-
-a #flooplans {
-	top:60px;
-}
