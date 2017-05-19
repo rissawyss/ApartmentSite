@@ -55,16 +55,32 @@ main {
 	margin-top:20px;
 }
 
-img {
-	/*width: 100%;*/
-	height: auto;
-	max-height: 400px;
-}
-
 td {
 	min-width:100px;
 }
 
 .telephone-number {
 	min-width:120px;
+}
+
+.slider .slides{
+	background-color: transparent;	
+}
+
+#amenitiesimg, #floorplansimg {
+	width: 100%;
+}
+
+.fatborder {
+	width:100%;
+	height:30px;
+}
+
+#amen-descrip {
+	height: 300px;
+}
+
+.floorplans {
+	max-width:100%;
+	max-height:100%;
 }
