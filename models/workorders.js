@@ -26,7 +26,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       defaultValue: false
     },
-    date_completed: DataTypes.DATEONLY,
+    date_completed: DataTypes.STRING,
     soft_delete: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
