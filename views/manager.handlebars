@@ -10,16 +10,16 @@
 					<table class="bordered">	
 						{{#if prospectsData}}						
 							<thead class="blue lighten-2">
-							  <th>First Name</th>
-							  <th>Last Name</th>
-							  <th>Email</th>
-							  <th>Telephone</th>
-							  <th>Bedrooms</th>
-							  <th>Move In Date</th>
-							  <th class="message">Message</th>
-							  <th>Created At</th>
-							  <th>Updated Ad</th>
-							  <th></th>
+								<th></th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>Email</th>
+								<th>Telephone</th>
+								<th>Bedrooms</th>
+								<th>Move In Date</th>
+								<th class="message">Message</th>
+								<th>Created At</th>
+								<th>Updated Ad</th>							  
 							</thead>
 						  {{#each prospectsData}}						  	
 							<tbody>
@@ -105,12 +105,13 @@
 								<td>{{lease_end}}</td>
 								<td>{{parking_permit}}</td>
 								<td>{{parking_permit_no}}</td>
-								<td>{{parking_permit_status}}</td>								
+								<td>{{parking_permit_status}}</td>															
 							</tr>
 						   {{/each}}
 						{{/if}}
 						{{#if applicantsData}}
 							<thead class="blue lighten-2">
+								<th></th>
 								<th>Name</th>
 								<th>Email</th>
 								<th>Phone</th>
@@ -137,6 +138,7 @@
 								<th>From Date</th>
 								<th>To Date</th>
 								<th>Gross Salary</th>
+								<th>Position Held</th>
 								<th>Ref Name</th>
 								<th>Ref Phone</th>
 								<th>Desired Move-in</th>

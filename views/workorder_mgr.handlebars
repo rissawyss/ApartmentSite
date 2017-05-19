@@ -18,15 +18,28 @@
 
 	<main>		
 		{{#if workordersData}}
-			
 			{{!-- display the clicked on work order form with resident's sumbitted data filled in --}}
-			
+			{{#each id}}
+				<p>{{request}}</p>
+			{{/each}}
+
+			{{#if prospectsData}}						
+							<thead class="blue lighten-2">
+								<th></th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>Email</th>
+								<th>Telephone</th>
+								<th>Bedrooms</th>
+								<th>Move In Date</th>
+								<th class="message">Message</th>
+								<th>Created At</th>
+								<th>Updated Ad</th>							  
+							</thead>
+			{{/if}}
 			<div class="row">
 				<h5 class="center amber-text darken-4">Maintenance Request</h5>
-				{{#each workordersData}}
-					<p>{{request}}</p>
-					<p>{{permission_to_enter}}</p>
-				{{/each}}
+				
 				<div class="input-field col s2 l2 offset-l3">
 			        <input id="apartment_number" name="apartment_number" type="text" class="validate">
 			        <label for="apartment_number">Apt. No.</label>				    
@@ -112,7 +125,7 @@
 
 	{{!-- Footer Partial --}}
 	{{> footer }}
-
+	
 	<!--Import jQuery before materialize.js-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<!-- Compiled and minified JavaScript -->
