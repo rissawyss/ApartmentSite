@@ -17,16 +17,22 @@
 	</header>
 
 	<main>		
-		{{#if workordersData}}			
+		{{#if workordersData}}
+			
 			{{!-- display the clicked on work order form with resident's sumbitted data filled in --}}
+			
 			<div class="row">
 				<h5 class="center amber-text darken-4">Maintenance Request</h5>
+				{{#each workordersData}}
+					<p>{{request}}</p>
+					<p>{{permission_to_enter}}</p>
+				{{/each}}
 				<div class="input-field col s2 l2 offset-l3">
 			        <input id="apartment_number" name="apartment_number" type="text" class="validate">
 			        <label for="apartment_number">Apt. No.</label>				    
 				</div>
 		        <div class="input-field col s12 offset-l3">
-		          <input disabled value="{{request}}" id="disabledRequest" type="text" class="materialize-textarea">
+		          <input disabled value="" id="disabledRequest" type="text" class="materialize-textarea">
 		          <label for="disabledRequest">Request</label>
 		        </div>
 		        <div class="row">
