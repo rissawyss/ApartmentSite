@@ -134,6 +134,19 @@ router.put('/workorders/update/:id', function(req, res, next){
     });
 });
 
+// PUT 2.5) soft delete
+router.put('/workorders/update/:id', function(req, res, next){
+    db.WorkOrder.update(
+        req.body,
+        {
+        where:{
+            id: req.params.id
+        }
+    }).then(function(){
+        res.render('manager');
+    });
+});
+
 // PUT 3) update applicant
 router.put('/applicants/update/:id', function(req, res, next){
     db.Applicant.update(
