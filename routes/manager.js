@@ -28,6 +28,19 @@ router.get('/tenants/:id?', function(req, res, next) {
     });
 });
 
+// testing route
+router.get('/testing/:id', function(req, res, next){
+    db.WorkOrder.findOne({
+            where: {
+                id:req.params.id
+         }}
+        ).then(function(workordersData){
+            console.log(workordersData);
+            res.render('workorder_mgr', {workordersData});
+        });
+
+});
+
 // GET 2 ) get work orders
 router.get('/workorders/:id?', function(req, res, next) {
     if(req.params.id){
@@ -36,12 +49,12 @@ router.get('/workorders/:id?', function(req, res, next) {
                 id:req.params.id
          }}
         ).then(function(workordersData){
-            // res.json(workordersData);
-            res.render('workorder_mgr', {workordersData});            
+            console.log(workordersData);
+            res.render('workorder_mgr', {workordersData});
         });
     }else{
     db.WorkOrder.findAll().then(function(workordersData) {
-        console.log(workordersData);
+        console.log('second one never hits if the above hits');
         res.render('manager', {workordersData});
     });
     }
@@ -123,6 +136,19 @@ router.post('/tenants/update/:id', function(req, res, next){
 
 // PUT 2) update workorder
 router.post('/workorders/update/:id', function(req, res, next){
+    db.WorkOrder.update(
+        req.body,
+        {
+        where:{
+            id: req.params.id
+        }
+    }).then(function(){
+        res.render('manager');
+    });
+});
+
+// PUT 2.5) soft delete
+router.put('/workorders/update/:id', function(req, res, next){
     db.WorkOrder.update(
         req.body,
         {
@@ -228,7 +254,7 @@ router.get('/prospects/delete/:id', function(req, res, next) {
 
 // DELETE 5) delete contractor
 router.get('/contractors/delete/:id', function(req, res, next){
-    db.Contractor.destroy({
+    db.Contractor.update({
         soft_delete: true,
     }, {
         where: {
