@@ -82,11 +82,17 @@ img {
 }
 
 #siteTitle {
-	z-index: 100px;
+	z-index: 100;
 	font-weight:900;
 	color: white;
 	position: absolute;
-	top: 40%;
-	left:33%;
-	text-shadow: 3px 3px black;
+	text-align:center;
+	top: 30%;
+	left:30%;		
+	text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
+	font-size:4em; 
+}
+
+a #flooplans {
+	top:60px;
 }
