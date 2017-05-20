@@ -22,6 +22,57 @@ main {
 	padding: 0px 20px 0px 20px;
 }
 
+#herocontainer {
+	position: relative;	
+}
+
+#hero {
+	z-index: 0;
+}
+
+.herotext {
+	
+	position:absolute;
+	top:18vw;
+	left:28vw;
+	z-index: 101;
+	font-size: 6vw;	
+	font-weight:900;
+	color:white;
+	text-shadow: 3px 3px 3px #000;
+}
+
+#amen_container {
+	position:relative;
+}
+
+
+.amen_text {
+	position:absolute;
+	top:19vw;
+	left:34vw;
+	z-index: 101;
+	font-size: 5vw;	
+	font-weight:900;
+	color:white;
+	text-shadow: 3px 3px 3px #000;
+}
+
+#floorplans_container {
+	position:relative;
+}
+
+.floorplans_text {
+	position:absolute;
+	top:15vw;
+	left:32vw;
+	z-index: 101;
+	font-size: 5vw;	
+	font-weight:900;
+	color:white;
+	text-shadow: 3px 3px 3px #000;
+}
+
 .amenities, .location, .floor-plans {
 	margin-bottom:0px;
 	padding-left:0px;
@@ -137,4 +188,8 @@ ul.b {
 #logofavicon {
 	max-height: 14px;
 	max-width: 14px;	
+}
+
+#location_marg {
+	margin-bottom:20px;
 }
