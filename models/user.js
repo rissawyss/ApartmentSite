@@ -23,14 +23,14 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-        User.hasMany(models.WorkOrder, {
-            onDelete: "cascade"
-        });
-      }
-    },
+    // classMethods: {
+    //   associate: function(models) {
+    //     // associations can be defined here
+    //     User.hasMany(models.WorkOrder, {
+    //         onDelete: "cascade"
+    //     });
+    //   }
+    // },
     instanceMethods: {
       validPassword: function(password) {
         return bcrypt.compareSync(password, this.password);
