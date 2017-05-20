@@ -114,3 +114,12 @@ td {
 	width:100%;	
 	position: relative;
 }
+
+#location_img {
+	width:100%;
+	max-height: 400px;
+}
+
+ul.b {
+    list-style-type: square;
+}
