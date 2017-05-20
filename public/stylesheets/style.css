@@ -133,3 +133,8 @@ ul.b {
 #sidelogo {
 	height:80px;
 }
+
+#logofavicon {
+	max-height: 14px;
+	max-width: 14px;	
+}
