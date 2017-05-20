@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var db = require('../models');
 
-var resident_controller = require('../controllers/residentcontroller');
+var resident_controller = require('../controllers/residentController');
 
 
 router.get('/:residentID?', resident_controller.workorder_create_get);
