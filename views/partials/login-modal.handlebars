@@ -1,4 +1,4 @@
-<a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+{{!-- <a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
 
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
 	<div class="modal-dialog">
@@ -14,4 +14,38 @@
 		  </div>
 		</div>
 	</div>
-</div>
+</div> --}}
+        <section>
+          <!-- MODAL STRUCTURE -->
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+
+              <h4 class="orange-text darken-1 center">Manager Login</h4>
+              <form class="login">
+                <div class="row">              
+                  <div class="input-field col s12" id="username-form">
+                    <input id="username-input" type="text" name="user" placeholder="Username">
+                    <small id="username-feedback" class=""></small>
+                    <label for="username-input">Username</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12" id="password-form">
+                    <input id="password-input" type="password" name="pass" placeholder="Password">
+                    <small id="password-feedback" class=""></small>
+                    <label for="password-input">Password</label>             
+                  </div>
+                  {{!-- <input type="submit" name="login" class="login loginmodal-submit" value="Login"> --}}
+                  <a type="submit" name="login" class="login loginmodal-submit modal-action modal-close waves-effect waves-green btn-flat" value="Login">Login</a>                  
+                  <a href="/users/signup" class="modal-action login-help modal-close waves-effect waves-green btn-flat">Register</a>                  
+                </div>
+              </form> 
+
+            </div>
+            {{!-- <div class="row">
+              <div class="modal-footer">
+                <a href="/manager" class="modal-action modal-close waves-effect waves-green btn-flat">Enter</a>
+              </div>
+            </div> --}}
+          </div>
+        </section>
