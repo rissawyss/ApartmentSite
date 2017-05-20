@@ -17,26 +17,7 @@
 	</header>
 
 	<main>		
-		{{#if workordersData}}
-			{{!-- display the clicked on work order form with resident's sumbitted data filled in --}}
-			{{#each id}}
-				<p>{{request}}</p>
-			{{/each}}
-
-			{{#if prospectsData}}						
-							<thead class="blue lighten-2">
-								<th></th>
-								<th>First Name</th>
-								<th>Last Name</th>
-								<th>Email</th>
-								<th>Telephone</th>
-								<th>Bedrooms</th>
-								<th>Move In Date</th>
-								<th class="message">Message</th>
-								<th>Created At</th>
-								<th>Updated Ad</th>							  
-							</thead>
-			{{/if}}
+		{{#if workordersData}}			
 			<div class="row">
 				<h5 class="center amber-text darken-4">Maintenance Request</h5>
 				
