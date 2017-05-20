@@ -22,7 +22,6 @@ router.post('/login', function(req, res) {
             res.json('/');
         } else {
             res.json('manager');
-
         }
         // console.log(data.dataValues.username);
         // }
