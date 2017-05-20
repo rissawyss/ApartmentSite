@@ -127,4 +127,9 @@ ul.b {
 #logo {
 	margin-top:5px;
 	height: 50px;
+	margin-bottom:5px;
+}
+
+#sidelogo {
+	height:80px;
 }
