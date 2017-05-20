@@ -37,10 +37,9 @@
               <img src="images/apartments780TT.png" id="hero" class="responsive-img">
               <div class="col s12 l12 orange darken-3 fatborder"></div>                        
             </div>
-
           </div>
-
         </section>
+        {{!-- PROPERTY DESCRIPTION --}}
         <section>          
           <div class="row">
             <div class="col l6">
@@ -54,6 +53,7 @@
             </div>
           </div>
         </section>
+        {{!-- AMENITIES --}}
         <section>
           <a id="amenities"></a>
           <div class="row amenities grey darken-2 white-text">
@@ -62,25 +62,38 @@
               <div class="col s12 l12 grey darken-4 fatborder"></div>
             </div>
           </div>
-          <div class="row">
-            <div class="col l6 offset-l3 center" id="amen-descrip">
-            <h5 class="orange-text text-darken-4">AMENITIES AT NEWPORT PLACE</h5>
-            <p>Newport Place provide unique and luxurious amenities from quartz counters to exciting night life.</p>
+          <div class="row">           
+            <div class="col s6 l6 offset-l3 center">
+              <div class="card-panel grey lighten-2">
+                <span>
+                  <h4 class="amber-text text-darken-4">AMENITIES AT NEWPORT PLACE</h4>
+                  <ul>
+                    <li>Hardwood-Style Flooring</li>
+                    <li>Modern Quartz Countertops</li>
+                    <li>Balconies and Patios</li>
+                    <li>Stainless-Steel GE Appliances</li>                    
+                    <li>Central Air and Heat</li>
+                    <li>Spacious Closets</li>
+                    <li>Cabanas and Pool Beds</li>
+                    <li>Fire Pits</li>
+                  </ul>
+                </span>
+              </div>            
           </div>
         </section>
-
+        {{!-- FLOOR PLANS --}}
         <section>
           <a id="floorplans"></a>
           <div class="row">
               <div class="col s12 l12">
                 <img src="images/livingroom484T.png" class="responsive-img" id="floorplansimg">
               </div>
-            </div>
+          </div>          
           <div class="row floor-plans orange darken-2 white-text">                        
             <div class="row">
               <div class="col s12 l6">
-                <h4 class="align">FLOOR PLANS</h4>
-                <p>Single, Double, and Triple Occupancy Options!<br>Check out our floor plans and you'll see exactly what we're talking about.</p>                
+                <h4>FLOORPLANS</h4>
+                <p>Santa Monica Apartments offers one, two, and three bedroom apartments. Contact us below by filling out your name, phone number, email, and desired floorplan. Not seeing what you're looking for? Availability changes every day, if you tell us what your needs are we’ll call you when availability changes.</p>
               </div>
               <div class="slider col s12 l6" id="floorplanslider">
                 <ul class="slides">
@@ -97,22 +110,24 @@
               </div>
             </div>
           </div>
+          <div class="col s12 l12 orange darken-2 fatborder"></div> 
         </section>
         {{!-- Location / Google Map --}}
         <section>
-            <div class="col s12 l12 orange darken-2 fatborder"></div>           
-            <a id="location"></a>            
-            <div class="row location black white-text">                
+            <a id="location"></a> 
+            <div class="col s12 l12 orange darken-2 fatborder"></div>                       
+            <div class="row location">                
               <div class="col s12 l6">          
                 <div id="map"></div>
               </div>
-              <div class="col s12 l6">            
-                <h4 class="align">LOCATION</h4>  
+              <div class="col s12 l6" id="location_img_box">
+                <img src="/images/santamonica.jpeg" id="location_img" class="responsive-img">  
               </div>
-            <div class="col s12 l12 white fatborder"></div>
+            <div class="col s12 l12 grey darken-3 fatborder"></div>  
+            <div class="col s12 l12 grey darken-3 fatborder"></div>
 
         </section>
-        {{!-- Contact Form --}}
+        {{!-- CONTACT FORM --}}
         <section>
           <div>
             <a id="contact"></a>
@@ -171,68 +186,46 @@
                     </button>
                   </div>                    
                 </div>                
-                <!-- Contact Form End -->
+                <!-- CONTACT FORM END-->
               </form>
             </div>
           </div>
         </section>
         <section>
-          <!-- Modal Structure -->
+          <!-- MODAL STRUCTURE -->
           <div id="modal1" class="modal">
             <div class="modal-content">
 
-              <h4 class="center">Manager Login</h4>
-              <form class='login' action="#" method="">
+              <h4 class="orange-text darken-1 center">Manager Login</h4>
+              <form class="login">
                 <div class="row">              
-                  <div class="input-field col s12">
-                    <input id="username-input" type="text" name="user" class="validate">
-                    <label for="username">Username</label>
+                  <div class="input-field col s12" id="username-form">
+                    <input id="username-input" type="text" name="user" placeholder="Username">
+                    <small id="username-feedback" class=""></small>
+                    <label for="username-input">Username</label>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="input-field col s12">
-                    <input id="password-input" type="password" name="pass" class="validate">
-                    <label for="password">Password</label>
+                  <div class="input-field col s12" id="password-form">
+                    <input id="password-input" type="password" name="pass" placeholder="Password">
+                    <small id="password-feedback" class=""></small>
+                    <label for="password-input">Password</label>             
                   </div>
-                  <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+                  {{!-- <input type="submit" name="login" class="login loginmodal-submit" value="Login"> --}}
+                  <a type="submit" name="login" class="login loginmodal-submit modal-action modal-close waves-effect waves-green btn-flat" value="Login">Login</a>                  
+                  <a href="/users/signup" class="modal-action login-help modal-close waves-effect waves-green btn-flat">Register</a>                  
                 </div>
-              </form>
+              </form> 
+
             </div>
-            <div class="row">
+            {{!-- <div class="row">
               <div class="modal-footer">
                 <a href="/manager" class="modal-action modal-close waves-effect waves-green btn-flat">Enter</a>
               </div>
-            </div>
+            </div> --}}
           </div>
         </section>
       </main>      
       {{> footer }}
-      {{!-- <footer class="page-footer grey darken-4">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">ApartmentSite</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright black">
-            <div class="container">
-            © 2017 Isometric Interactive
-            <!-- Modal Trigger -->
-            <a class="grey-text text-lighten-4 right" href="#modal1"><i class="lock material-icons tiny">lock_outline</i> Management Login</a>
-            
-            
-            </div>
-          </div>
-      </footer> --}}   
+      
       
