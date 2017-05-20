@@ -33,10 +33,17 @@ var tenant = require('./routes/tenant');
 var manager = require('./routes/manager');
 var applicant = require('./routes/applicant');
 
+var user = require('./routes/user');
+
+var application_controller = require('./controllers/application_controller');
+var users_controller = require('./controllers/users_controller');
+var trips_controller = require('./controllers/trips_controller');
+var pricing_controller = require('./controllers/pricing_controller');
+
 //use handlebars engine as template engine, use 'main' as our base file
 var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({
-	defaultLayout: 'main'
+    defaultLayout: 'main'
 }));
 app.set('view engine', 'handlebars'); // set the 'view engine'
 
@@ -57,14 +64,17 @@ app.use('/applicant', applicant);
 // app.use('/users', users);
 
 
-
+// app.use('/', application_controller);
+app.use('/users', user);
+app.use('/trips', trips_controller);
+app.use('/pricing', pricing_controller);
 
 
 // app.use(function(req, res, next) {
 //   var err = new Error('Not Found');
 //   err.status = 404;
 //   res.send('404');
-  // next(err);
+// next(err);
 // });
 
 // error handler
