@@ -18,7 +18,14 @@
 
 	<main>		
 		{{#if workordersData}}
+
 			{{!-- display the clicked on work order form with resident's sumbitted data filled in --}}
+			{{#if workordersData}}
+			<h1>{{workordersData.request}}</h1>
+			<h1>{{workordersData.apartment_number}}</h1>
+			<h1>{{workordersData.request}}</h1>
+
+			{{/if}}
 			{{#each id}}
 				<p>{{request}}</p>
 			{{/each}}

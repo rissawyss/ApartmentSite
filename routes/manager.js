@@ -50,7 +50,8 @@ router.get('/workorders/:id?', function(req, res, next) {
          }}
         ).then(function(workordersData){
             // console.log(workordersData.dataValues);
-            var workordersData = workordersData.dataValues;
+            // workordersData = {request:workordersData.dataValues}
+            // workordersData = workordersData.request;
             console.log(workordersData);
             res.render('workorder_mgr', {workordersData});
         });
