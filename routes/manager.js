@@ -56,7 +56,11 @@ router.get('/workorders/:id?', function(req, res, next) {
             res.render('workorder_mgr', {workordersData});
         });
     }else{
-    db.WorkOrder.findAll().then(function(workordersData) {
+    db.WorkOrder.findAll({
+        where: {
+            soft_delete:false
+        }}
+    ).then(function(workordersData) {
         console.log('second one never hits if the above hits');
         res.render('manager', {workordersData});
     });
@@ -146,6 +150,7 @@ router.post('/workorders/update/:id', function(req, res, next){
             id: req.params.id
         }
     }).then(function(){
+        console.log(req.body.date_completed);
         res.render('manager');
     });
 });
