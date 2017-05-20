@@ -188,18 +188,19 @@
             <div class="modal-content">
 
               <h4 class="center">Manager Login</h4>
-              <form action="#" method="">
+              <form class='login' action="#" method="">
                 <div class="row">              
                   <div class="input-field col s12">
-                    <input id="username" type="text" class="validate">
+                    <input id="username-input" type="text" name="user" class="validate">
                     <label for="username">Username</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="password" type="password" class="validate">
+                    <input id="password-input" type="password" name="pass" class="validate">
                     <label for="password">Password</label>
                   </div>
+                  <input type="submit" name="login" class="login loginmodal-submit" value="Login">
                 </div>
               </form>
             </div>
