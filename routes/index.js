@@ -8,7 +8,7 @@ var authcontroller = require('../controllers/authcontroller');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {	
-  res.render('index', {title:'Apartment Site'});
+  res.render('index', {title:'The MADDOX'});
 });
 
 
