@@ -8,23 +8,23 @@
 			<div class="row iconcontainer l12">
 				<div class="col s1 l1"></div>
 				<div class="col s2 l2 center">
-					<a  href="http://localhost:8080/manager/prospects"><img src="/images/prospects.png" class="mgr_icons"></a>
+					<a  href="/manager/prospects"><img src="/images/prospects.png" class="mgr_icons"></a>
 					<p class="white-text center">PROSPECTS</p>
 				</div>
 				<div class="col s2 l2 center">
-					<a  href="http://localhost:8080/manager/applicants"><img src="/images/applicants.png" class="mgr_icons"></a>
+					<a  href="/manager/applicants"><img src="/images/applicants.png" class="mgr_icons"></a>
 					<p class="white-text center">APPLICANTS</p>
 				</div>
 				<div class="col s2 l2 center">
-					<a  href="http://localhost:8080/manager/tenants"><img src="/images/tenants.png" class="mgr_icons"></a>
+					<a  href="/manager/tenants"><img src="/images/tenants.png" class="mgr_icons"></a>
 					<p class="white-text center">TENANTS</p>
 				</div>
 				<div class="col s2 l2 center">
-					<a  href="http://localhost:8080/manager/workorders"><img src="/images/workorders.png" class="mgr_icons"></a>
+					<a  href="/manager/workorders"><img src="/images/workorders.png" class="mgr_icons"></a>
 					<p class="white-text center">WORK ORDERS</p>
 				</div>
 				<div class="col s2 l2 center">
-					<a  href="http://localhost:8080/manager/contractors"><img src="/images/vendors.png" class="mgr_icons"></a>
+					<a  href="/manager/contractors"><img src="/images/vendors.png" class="mgr_icons"></a>
 					<p class="white-text center">CONTRACTORS</p>
 				</div>
 				<div class="col s1 l1"></div>				
@@ -52,7 +52,7 @@
 						  {{#each prospectsData}}						  	
 							<tbody>
 						    <tr>
-						      <td><a class="btn-floating btn-medium waves-effect waves-light red darken-4" href="http://localhost:8080/manager/prospects/delete/{{id}}"><i class="material-icons">delete</i></a></td> 
+						      <td><a class="btn-floating btn-medium waves-effect waves-light red darken-4" href="/manager/prospects/delete/{{id}}"><i class="material-icons">delete</i></a></td> 
 						      <td><strong>{{first_name}}</strong></td>
 						      <td><strong>{{last_name}}</strong></td>
 						      <td>{{email}}</td>
@@ -81,7 +81,7 @@
 						  {{#each contractorsData}}
 						  	<tbody>
 						  	<tr>
-							  	<td><a class="btn-floating btn-medium waves-effect waves-light red darken-4" href="http://localhost:8080/manager/contractors/delete/{{id}}"><i class="material-icons">delete</i></a></td>
+							  	<td><a class="btn-floating btn-medium waves-effect waves-light red darken-4" href="/manager/contractors/delete/{{id}}"><i class="material-icons">delete</i></a></td>
 								<td>{{business_name}}</td>
 								<td>{{doing_business_as_name}}</td>
 								<td>{{street_address}}</td>
@@ -117,7 +117,7 @@
 						  {{#each tenantsData}}
 						  	<tbody>
 						  	<tr>
-						  		<td><a class="btn-floating btn-medium waves-effect waves-light red darken-4" href="http://localhost:8080/manager/tenants/delete/{{id}}"><i class="material-icons">delete</i></a></td>
+						  		<td><a class="btn-floating btn-medium waves-effect waves-light red darken-4" href="/manager/tenants/delete/{{id}}"><i class="material-icons">delete</i></a></td>
 								<td><strong>{{name}}</strong></td>
 								<td>{{email}}</td>
 								<td>{{street_address}}</td>
@@ -231,8 +231,8 @@
 							{{#each workordersData}}
 							<tbody>
 								<tr>
-									<td><a class="btn-floating btn-medium waves-effect waves-light blue darken-4" href="http://localhost:8080/manager/workorders/{{id}}"><i class="material-icons">mode_edit</i></a></td>
-									<td><a class="btn-floating btn-medium waves-effect waves-light red darken-4" href="http://localhost:8080/manager/workorders/delete/{{id}}"><i class="material-icons">delete</i></a></td>
+									<td><a class="btn-floating btn-medium waves-effect waves-light blue darken-4" href="/manager/workorders/{{id}}"><i class="material-icons">mode_edit</i></a></td>
+									<td><a class="btn-floating btn-medium waves-effect waves-light red darken-4" href="/manager/workorders/delete/{{id}}"><i class="material-icons">delete</i></a></td>
 									<td>{{request}}</td>
 									<td>{{apartment_number}}</td>
 									<td>{{last_activity}}</td>
