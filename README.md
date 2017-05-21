@@ -61,7 +61,7 @@ The Controller determines the appropriate action method to handle requests from 
 ![put-workorder-manager](https://cloud.githubusercontent.com/assets/22284225/26281265/de62bba4-3da6-11e7-8203-b3497326c01f.png)
 
 ### AUTHENTICATION
-A registration form is delivered at the /signup path and displays a registration form which validates password by using regex. 
+A registration form is delivered at the /signup path which validates password by using regex. 
 The Manager Login form is delivered via a modal, which authenticates user login by checking for existing username in the database (User model).
 ![login-signup](https://cloud.githubusercontent.com/assets/22284225/26281427/c60245e4-3daa-11e7-8be5-5e9c1704af17.png)
 
