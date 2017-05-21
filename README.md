@@ -66,19 +66,19 @@ The Manager Login form is delivered via a modal, which authenticates user login 
 ![login-signup](https://cloud.githubusercontent.com/assets/22284225/26281427/c60245e4-3daa-11e7-8be5-5e9c1704af17.png)
 
 ## DESIGN
-* **Dynamic view of property and floor plans**
+### Dynamic view of property and floor plans
 
 ![floorplans](https://cloud.githubusercontent.com/assets/22284225/26281437/11275cda-3dab-11e7-8c1a-537266e8ef14.png)
 
-* **Quick navigation to manager’s links**
+### Quick navigation to manager’s links
 
 ![managerview](https://cloud.githubusercontent.com/assets/22284225/26281442/404c2676-3dab-11e7-814f-afa0111dfe98.png)
 
-* **Table view of database models, and View/Edit/Delete icons**
+### Table view of database models, and View/Edit/Delete icons
 
 ![tableview](https://cloud.githubusercontent.com/assets/22284225/26281452/94cf6c80-3dab-11e7-89c8-c9bd03a3e27d.png)
 
-* **Form interface for contacting and applying**
+### Form interface for contacting and applying
 
 ![formview](https://cloud.githubusercontent.com/assets/22284225/26281455/b849456e-3dab-11e7-8349-bbc09a12e7a1.png)
 
@@ -97,5 +97,5 @@ The Manager Login form is delivered via a modal, which authenticates user login 
 
 
 
-#### Copyright 2017 Isometric Interactive
+#### Copyright 2017 &copy; Isometric Interactive
 ![2017-04-20 2 - copy](https://cloud.githubusercontent.com/assets/22284225/26281489/6557f056-3dad-11e7-9948-0660b3654479.png)
